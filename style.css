@@ -1,0 +1,809 @@
+/*  
+Theme Name: Emma
+Theme URI: http://indrayam.com/
+Description: A simple theme with lots of orange.
+Version: 1.0
+Author: Anand Sharma
+Author URI: http://indrayam.com/
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700;800;900&family=PT+Serif:wght@400;700&display=swap');
+
+
+
+body {
+	margin: 0px 0px 5px 0px;
+	color: #333333;
+	font-family: "PT Serif", Georgia, "Times New Roman", serif;
+	font-size: 17px;
+	background-image: url("./images/blue-dash.gif");
+	border-top: 10px solid #e7651a;
+}
+
+h1{
+	font-family: Lora, Georgia, "Times New Roman", serif;
+	font-weight: 900;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	padding-top: 1pt;
+}
+
+h2{
+	font-family: Lora, Georgia, "Times New Roman", serif;
+	font-weight: 700;
+	margin-top: 0pt;
+	margin-bottom: 5pt;
+	padding-top: 0pt;
+	border-style: none none dashed none;
+	border-color: #CCCCCC;
+	border-width: 0 0 1px 0;
+}
+
+h2 a  {
+	color: #333333;
+	text-decoration: none;
+}
+
+h2 a:hover {
+	color: #333333;
+	text-decoration: none;
+}
+
+h3{
+	font-weight: normal;
+	color: #808080;
+	margin-top: 0pt;
+	padding-top: 0pt;
+}
+
+h4{
+	font-weight: bold;
+	color: #808080;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	padding-top: 0pt;
+}
+
+a {
+       color:#900;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+blockquote
+{
+	font: normal 17px/1.6 Lora, Georgia, "Times New Roman", serif;
+	margin: 1.2em 45px 1.4em 45px;
+	border: 1px solid #EBD4C8;
+	border-left: 4px solid #e7651a;
+	padding: 12px 16px 10px 16px;
+	background-color: #FCF7F4;
+}
+
+blockquote p {
+	margin: 0;
+}
+
+blockquote cite {
+	display: block;
+	margin-top: 10px;
+	font: italic 14px/1.5 "PT Serif", Georgia, "Times New Roman", serif;
+	color: #666;
+	text-align: right;
+}
+
+blockquote cite a {
+	color: #900;
+}
+
+.archival-note {
+	font: italic 11pt Georgia, "Times New Roman", Times, serif;
+	line-height: 1.55;
+	text-align: left;
+	margin: 1.2em 45px 1.4em 45px;
+	border: 1px solid #cbd5d8;
+	border-left: 4px solid #8fa6ad;
+	padding: 12px 16px 10px 16px;
+	background-color: #f4f7f7;
+	color: #59666a;
+}
+
+.archival-note p {
+	margin: 0;
+}
+
+pre
+{
+	font: normal 9pt courier, sans-serif;
+	margin-left: 10px; 
+	margin-right: 10px; 
+	border: 1px solid #e7651a; 
+	border-left: 1px solid #e7651a; 
+	padding: 5px 5px 5px 10px;
+        background-color: #FFFFCC;
+        overflow: auto;
+}
+
+/* Classes for items used more than once */
+
+.post{
+	margin-top: 24pt;
+	margin-bottom: 10pt;
+	margin-left: 72pt;
+	margin-right: 72pt;
+	background-color: #FFFFFF;
+	border-left:1px solid #808080;
+	border-right:1px solid #808080;
+	border-bottom:1px solid #808080;
+	border-top:1px solid #808080;
+	padding:15px;
+}
+
+.flickr-photo { 
+        border: solid 1px #000000; 
+}
+
+.flickr-frame {	
+       float: right; 
+       margin-left: 15px; 
+       margin-bottom: 15px; 
+}
+
+.flickrEmailImage {	
+       float: left;
+       margin-right: 15px;
+       margin-bottom: 15px;
+       border: solid 1px #000000;
+}
+
+.comment {
+	margin-top: 24pt;
+	margin-bottom: 10pt;
+	margin-left: 72pt;
+	margin-right: 72pt;
+	background-color: #FCF7F4;
+	border-left:1px solid #EBD4C8;
+	border-right:1px solid #EBD4C8;
+	border-bottom:1px solid #EBD4C8;
+	border-top:1px solid #EBD4C8;
+	padding:15px;
+}
+
+.commententry{
+	background-color: #FFFFFF;
+	border-left:1px solid #808080;
+	border-right:1px solid #808080;
+	border-bottom:1px solid #808080;
+	border-top:1px solid #808080;
+	padding:15px;
+}
+
+.commententryauthor{
+	background-color: #FFFFFF;
+	border-left:3px solid #900;
+	border-right:1px solid #808080;
+	border-bottom:1px solid #808080;
+	border-top:1px solid #808080;
+	padding:15px;
+}
+
+
+.postlinks{
+	text-align: right;
+	font-size:90%;
+}
+
+.time{
+	font-family: Courier, monospace;
+}
+
+.copyright {
+	font-family: "PT Serif", Georgia, "Times New Roman", serif;
+	font-size: 11px;
+	margin-top: 5px;
+	text-align:center;
+	color:#999;
+}
+
+.note {
+	font-family: "PT Serif", Georgia, "Times New Roman", serif;
+	font-size: 12px;
+	color:#900;
+}
+
+/* IDs only occur once per page */
+
+#sidebar{
+	float:right;
+	width : 200px;
+	background-color: #FFFFFF;
+	border-left:1px solid #000000;
+	border-right:1px solid #000000;
+	border-bottom:1px solid #000000;
+	border-top:1px solid #000000;
+	padding:15px;
+	margin-top:60px;
+	margin-left:25px;
+}
+
+#header{
+	margin-top: 24pt;
+	margin-bottom: 10pt;
+	margin-left: 72pt;
+	margin-right: 52pt;
+	padding-top: 1px;
+}
+
+/* Keep the legacy header portrait overlapping the first content panel. */
+#header + .post {
+	margin-top: -10pt;
+}
+
+#header + .post > h2:first-child {
+	clear: both;
+}
+
+#topnav{
+	font-size: 90%;
+}
+
+#myPic{
+	padding-right:12px;
+	float:left;
+	margin-left: 12pt;
+}
+
+#commentmeta{
+	font-size:85%;
+}
+
+#postdates{
+	text-align: right;
+	font-size:85%;
+}
+
+#edit{
+	text-align: center;
+}
+
+#strike{
+   text-decoration: line-through;
+}
+
+.aboutme {
+	font: normal 10pt Georgia, "Times New Roman", Times, serif;
+	margin-left: 50px; 
+	margin-right: 10px; 
+	padding: 5px 5px 5px 10px;
+}
+
+.right {
+       text-align: right;
+}
+
+#code {
+       font-family: "Courier New", Courier, sans-serif;
+       font-weight: normal;
+       font-size: 10pt;
+       color: #3232cd;
+}
+
+#codeflow {
+       font-family: "Courier New", Courier, sans-serif;
+       font-weight: normal;
+}
+
+.poem {
+        font: italic 1.5em "monotype corsiva", Georgia, Serif;
+	margin-left: 10px; 
+	margin-right: 10px;
+        border: 1px solid  #ff9900;
+        background: #ffffcc;
+        width: 90%;
+        text-align: center;
+} 
+
+.poem h2 {
+        font-family: "monotype corsiva", Georgia, Serif;
+        font-size: 105%;
+        font-weight: bold;  
+	margin-left: 10px; 
+	margin-right: 10px;
+        text-align: center; 
+        border-width: 0 0 0 0;
+}
+
+#marriage-bold {
+        font-family: "monotype corsiva", Georgia, Serif;
+        font-size: 130%;
+        font-weight: normal;
+        color: red;
+}
+
+#marriage {
+        font-family: "monotype corsiva", Georgia, Serif;
+        font-size: 115%;
+        font-weight: normal;
+        color: black;
+}
+
+
+}
+
+.alt {
+        background-color: #FAFAF0 !important;
+}
+
+.small {
+        font-size: 0.9em;
+        color: #999;
+}
+
+ul {
+        padding: 0;
+        margin: 0;
+}
+
+li {
+        list-style: none;
+}
+
+.date {
+	position: absolute;
+	background: url(/images/calendar.png);
+	height: 67px;
+	width: 59px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	margin: 0;
+}
+
+.date .month, .date .day {
+	text-align: center;
+	width: 59px;
+}
+.date .month {
+	overflow: hidden;
+	font-size: 13px;
+	position: absolute;
+	margin-top: 42px;
+	text-transform: uppercase;
+}
+
+.date .day {
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 32px;
+	position: absolute;
+	margin-top: 11px;
+}
+
+.date .year {
+	display: none;
+}
+
+/* ── About Me page ─────────────────────────────────────────────────── */
+.aboutme-page {
+	padding: 20px 20px 24px 20px;
+}
+
+.aboutme-photo {
+	float: left;
+	margin: 4px 18px 12px 0;
+	max-width: 160px;
+}
+
+/* ── Archives page ──────────────────────────────────────────────────── */
+.archives-page h3 {
+	margin-top: 24px;
+	margin-bottom: 4px;
+	padding-bottom: 2px;
+	border-bottom: 1px dashed #ccc;
+}
+
+.archive-legend {
+	margin: 0 0 20px 0;
+	padding: 8px 12px;
+	border-left: 3px solid #9b8f87;
+	background-color: #f5f2ef;
+	color: #59666a;
+	font-size: 0.9em;
+}
+
+.archive-marker {
+	color: #8a6d5a;
+	font-weight: bold;
+}
+
+.archives-page li.archive-degraded::before {
+	content: "*";
+	color: #8a6d5a;
+	font-weight: bold;
+	display: inline-block;
+	width: 0.8em;
+}
+
+.archives-page li.archive-degraded a {
+	color: #7e4f3a;
+}
+
+.archives-page ul {
+	margin: 0 0 0 20px;
+	padding: 0;
+}
+
+.archives-page li {
+	list-style: none;
+	margin: 2px 0;
+	line-height: 1.5;
+}
+
+.aboutme-page .aboutme {
+	font: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+/* ── Wide-screen width constraints ───────────────────────────────────────── */
+/* The legacy theme used fixed pt margins which makes content span too wide. */
+@media screen and (min-width: 900px) {
+	body {
+		/* keep the orange top border behavior but center content area below */
+	}
+	#header {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		max-width: 60% !important;
+	}
+	.post {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		max-width: 60% !important;
+	}
+}
+/* ── Collapsible category archive ─────────────────────────────────── */
+.archives-page details.category-group,
+.archives-page details.archive-year-group {
+	margin-top: 24px;
+}
+
+.archives-page details.category-group:first-of-type,
+.archives-page details.archive-year-group:first-of-type {
+	margin-top: 0;
+}
+
+.archives-page details.category-group summary,
+.archives-page details.archive-year-group summary {
+	display: block;
+	position: relative;
+	margin-bottom: 4px;
+	padding: 2px 0 2px 1.2em;
+	border-bottom: 1px dashed #ccc;
+	font-size: 1.17em;
+	font-weight: bold;
+	cursor: pointer;
+	list-style: none;
+}
+
+.archives-page details.category-group summary::-webkit-details-marker,
+.archives-page details.archive-year-group summary::-webkit-details-marker {
+	display: none;
+}
+
+.archives-page details.category-group summary::marker,
+.archives-page details.archive-year-group summary::marker {
+	content: "";
+}
+
+.archives-page details.category-group summary::before,
+.archives-page details.archive-year-group summary::before {
+	content: "";
+	position: absolute;
+	left: 0.25em;
+	top: 0.42em;
+	width: 0.4em;
+	height: 0.4em;
+	border-right: 1px solid #8a6d5a;
+	border-bottom: 1px solid #8a6d5a;
+	transform: rotate(-45deg);
+	transition: transform 0.15s ease;
+}
+
+.archives-page details.category-group[open] summary::before,
+.archives-page details.archive-year-group[open] summary::before {
+	top: 0.3em;
+	transform: rotate(45deg);
+}
+
+.archives-page details.category-group summary .small,
+.archives-page details.archive-year-group summary .small {
+	font-size: 0.77em;
+	font-weight: normal;
+}
+
+
+/* On narrow screens, fall back to nearly full width. */
+@media screen and (max-width: 899px) {
+	#header, .post {
+		margin-left: 10px !important;
+		margin-right: 10px !important;
+		max-width: none !important;
+	}
+}
+
+/* Resume page additions. The surrounding chrome intentionally remains the
+   same as the v1 blog: the resume is another post on the same site. */
+.resume-page {
+	padding: 20px;
+}
+
+.resume-identity {
+	position: relative;
+	clear: both;
+	margin: 0 0 1.25em;
+	padding: 0.2em 0 1.2em;
+	text-align: center;
+}
+
+.resume-actions {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45em;
+}
+
+.resume-pdf-download {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25em;
+	color: #999999;
+	font-size: 0.72em;
+	text-decoration: none;
+}
+
+.resume-pdf-download:hover {
+	color: #e7651a;
+	text-decoration: none;
+}
+
+.resume-pdf-icon {
+	width: 1.35em;
+	height: 1.35em;
+}
+
+.article-page {
+	clear: both;
+}
+
+#header + .post.article-page {
+	margin-top: 24pt;
+}
+
+.architect-book {
+	margin: 1.4em 0 2em;
+	text-align: center;
+}
+
+.architect-book img {
+	display: inline-block;
+	max-width: min(100%, 300px);
+	height: auto;
+	border: 0;
+}
+
+.architect-mantra {
+	font-style: italic;
+}
+
+.resume-identity h1 {
+	font-family: Lora, Georgia, "Times New Roman", serif;
+	font-size: clamp(1.875rem, 3.75vw, 2.9rem);
+	font-weight: 900;
+	letter-spacing: 0;
+	line-height: 1.02;
+	margin: 0;
+	margin-bottom: 0.315em;
+	padding: 0;
+}
+
+.resume-contact {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 0.55em 1em;
+	font-family: Courier, "Courier New", monospace;
+	font-size: 0.9em;
+}
+
+.resume-contact a,
+.resume-contact-item {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45em;
+	color: #333333;
+	white-space: nowrap;
+}
+
+.resume-contact a {
+	text-decoration: underline;
+}
+
+.resume-contact a:hover {
+	color: #990000;
+}
+
+.resume-contact-icon {
+	width: 1.45em;
+	height: 1.45em;
+	fill: none;
+	stroke: currentColor;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 1.8;
+	flex: 0 0 auto;
+}
+
+.resume-page h2 {
+	color: #e7651a;
+	font-size: 1.1em;
+	letter-spacing: 0.03em;
+	margin-top: 1.35em;
+	margin-bottom: 0.65em;
+	padding-bottom: 3px;
+	border-bottom: 1px dashed #cccccc;
+	text-transform: uppercase;
+}
+
+.resume-page > h2:first-child {
+	margin-top: 0;
+}
+
+.resume-page h3.resume-employer {
+	color: #333333;
+	font-family: Lora, Georgia, "Times New Roman", serif;
+	font-size: 1.2em;
+	display: flex;
+	align-items: center;
+	gap: 0.65em;
+	margin-top: 1.25em;
+	margin-bottom: 0.35em;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #808080;
+}
+
+.resume-brand-logo {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	line-height: 1;
+}
+
+.resume-brand-cisco {
+	width: 3.5em;
+	height: 2.15em;
+}
+
+.resume-brand-cisco img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.resume-brand-avaya {
+	width: 3.9em;
+	height: 1.45em;
+}
+
+.resume-brand-lucent {
+	width: 4.1em;
+	height: 1.85em;
+}
+
+.resume-brand-asu {
+	width: 5.1em;
+	height: 1.25em;
+}
+
+.resume-brand-avaya img,
+.resume-brand-lucent img,
+.resume-brand-asu img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.resume-institution {
+	display: flex;
+	align-items: center;
+	gap: 0.65em;
+	margin: 0.55em 0 0.7em;
+}
+
+.resume-page h4 {
+	color: #333333;
+	font-family: Lora, Georgia, "Times New Roman", serif;
+	font-size: 1em;
+	margin-top: 1em;
+	margin-bottom: 0.12em;
+}
+
+.resume-page p {
+	margin-top: 0.55em;
+	margin-bottom: 0.7em;
+}
+
+.resume-page .resume-role {
+	margin-bottom: 1.15em;
+	page-break-inside: avoid;
+}
+
+.resume-page .resume-meta {
+	color: #808080;
+	font-size: 0.9em;
+	margin: 0 0 0.5em;
+}
+
+.resume-page .resume-meta strong {
+	color: #333333;
+}
+
+.resume-page ul {
+	margin: 0.35em 0 0.7em 1.35em;
+	padding: 0;
+}
+
+.resume-page li {
+	list-style: disc;
+	margin: 0.28em 0;
+}
+
+.resume-page .resume-list-tight li {
+	margin: 0.12em 0;
+}
+
+.resume-page .resume-note {
+	color: #666666;
+	font-size: 0.9em;
+	font-style: italic;
+}
+
+.resume-page .resume-skill-group {
+	margin: 0.9em 0;
+}
+
+.resume-page .resume-skill-group strong {
+	color: #e7651a;
+	font-family: Lora, Georgia, "Times New Roman", serif;
+	font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+	.resume-page {
+		padding: 15px 10px;
+	}
+
+	.resume-contact {
+		font-size: 0.82em;
+		gap: 0.55em 1em;
+	}
+
+	.resume-page h2 {
+		font-size: 1em;
+	}
+}
+
+@media print {
+	.resume-page .resume-role {
+		page-break-inside: avoid;
+	}
+}

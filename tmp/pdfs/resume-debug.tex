@@ -1,0 +1,512 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{fontspec}
+\setmainfont{Courier New}
+\setmonofont{Courier New}
+
+\usepackage[letterpaper,left=0.62in,right=0.62in,top=0.52in,bottom=0.55in]{geometry}
+\usepackage{xcolor}
+\definecolor{resumeaccent}{HTML}{35B4DE}
+\definecolor{resumetext}{HTML}{25282A}
+\definecolor{resumemuted}{HTML}{6D7377}
+
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=resumeaccent,
+  linkcolor=resumeaccent,
+  pdfborder={0 0 0}
+}
+
+\color{resumetext}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.42em}
+\linespread{1.03}
+
+\titleformat{\section}
+  {\normalfont\fontsize{22}{25}\selectfont\bfseries\color{resumetext}}
+  {}{0pt}{}
+\titlespacing*{\section}{0pt}{0pt}{0.35em}
+
+\titleformat{\subsection}
+  {\normalfont\fontsize{10.5}{12}\selectfont\bfseries\color{resumeaccent}\scshape}
+  {}{0pt}{}
+  [\vspace{-0.35em}\color{resumetext}\titlerule]
+\titlespacing*{\subsection}{0pt}{1.25em}{0.55em}
+
+\titleformat{\subsubsection}
+  {\normalfont\fontsize{10.5}{12}\selectfont\bfseries\color{resumetext}}
+  {}{0pt}{}
+\titlespacing*{\subsubsection}{0pt}{0.8em}{0.15em}
+
+\titleformat{\paragraph}[block]
+  {\normalfont\fontsize{9.7}{11}\selectfont\bfseries\color{resumetext}}
+  {}{0pt}{}
+\titlespacing*{\paragraph}{0pt}{0.55em}{0.05em}
+
+\setlist[itemize]{
+  leftmargin=1.25em,
+  label=\textbullet,
+  itemsep=0.12em,
+  topsep=0.18em,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\fancypagestyle{resume}{
+  \fancyhf{}
+  \fancyfoot[C]{\color{resumemuted}\fontsize{8}{9}\selectfont\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+\pagestyle{resume}
+
+\AtBeginDocument{\noindent\color{resumeaccent}\rule{\linewidth}{3pt}\vspace{0.55em}}
+\AtBeginDocument{\raggedbottom}
+
+\renewcommand{\tightlist}{%
+  \setlength{\itemsep}{0.12em}\setlength{\parskip}{0pt}\setlength{\parsep}{0pt}%
+}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Anand Sharma}\label{anand-sharma}
+
+\textbf{Architect / Senior Staff Engineer}
+
+Staff Software Engineer, Solutions Architect, DevOps, AI-Pilled
+
+\begin{itemize}
+\tightlist
+\item
+  Austin, TX
+\item
+  (408) 597-7614
+\item
+  anand.sharma@gmail.com
+\item
+  \href{https://www.linkedin.com/in/indrayam/}{LinkedIn}
+\end{itemize}
+
+\subsection{Summary}\label{summary}
+
+\href{https://resume.indrayam.com/architect.html}{Software architect}
+who still believes the Unix terminal is the most elegant interface ever
+invented. I started in graduate school with an SGI workstation running
+IRIX; more than two decades later, I bring that same instinct to my work
+at Cisco, where I build enterprise DevOps and developer-platform systems
+used by 30,000+ engineers. My focus is making complex software delivery
+feel simple - from CI/CD, release orchestration, and cloud-native
+architecture to AI-assisted tools and multi-agent systems. I care deeply
+about the details, but I also understand the importance of zooming out -
+distilling the essence of the problem, its context, and its
+possibilities so others can see what matters.
+
+I like to build things, evangelize the ideas behind them, and inspire
+the people around me to make things that matter.
+
+\subsection{Key Achievements}\label{key-achievements}
+
+\begin{itemize}
+\tightlist
+\item
+  Invited to present at the prestigious Cisco Live 2017 and Cisco Live
+  2016 events on advancements in DevOps and Enterprise Class Continuous
+  Delivery.
+\item
+  Led Cisco IT's first Software Developer Experience as a Thought
+  Leader, Evangelist, and Solutions Architect.
+\item
+  Innovated development of Cisco's first centrally managed Continuous
+  Delivery Platform.
+\item
+  Architected the first customer-facing Enterprise App Store for Cisco's
+  Cius product.
+\item
+  Created the first Social Computing Platform for Cisco.
+\item
+  Oversaw development of the first Cisco API Management Platform,
+  featuring a customer-facing API Console.
+\end{itemize}
+
+\subsection{Experience}\label{experience}
+
+\subsubsection{Cisco Systems}\label{cisco-systems}
+
+\paragraph{Senior Staff Software
+Engineer}\label{senior-staff-software-engineer}
+
+\textbf{Job Title:} Sr.~Staff Software Engineer (Enterprise
+DevOps-as-a-Service)\\
+\textbf{Dates:} February 2023 - Present\\
+\textbf{Location:} Austin, Texas Metropolitan Area - Remote
+
+\begin{itemize}
+\tightlist
+\item
+  Lead efforts to standardize an enterprise-scale PPM tool for
+  Operations and Engineering, including conducting a thorough analysis
+  of Aha!, Atlassian Jira Align, and ServiceNow.
+\item
+  Drive widespread adoption of Jira Align across multiple teams
+  following a presentation to the COO on key findings.
+\item
+  Investigate solutions to modernize the stack, reduce technical debt,
+  and offer a frictionless experience for the 25K+ Cisco employees
+  across Engineering, Customer Support, and Operations, replacing a
+  homegrown tool for defect lifecycle management.
+\end{itemize}
+
+\paragraph{Staff Software Engineer}\label{staff-software-engineer}
+
+\textbf{Dates:} January 2022 - February 2023\\
+\textbf{Location:} Austin, Texas - Remote
+
+\begin{itemize}
+\tightlist
+\item
+  Spearhead the definition, design, documentation, and delivery of
+  cutting-edge software delivery (Enterprise DevOps) tools and
+  experiences to a team of over 30K software engineers.
+\item
+  Shape enterprise-wide decision-making by presenting frequent,
+  impactful strategic and operational updates related to services and
+  service offerings to Senior IT Leadership.
+\item
+  Provide insightful thought leadership and technical solutions while
+  evangelizing solutions to Cisco IT customers.
+\item
+  Reduced costs by launching the Cisco FCS Software Distribution
+  solution using Dev Hub Download to support shipping FCS binaries as
+  container images instead of paying Cloud Providers to host FCS
+  container images.
+\end{itemize}
+
+\paragraph{Senior DevOps Architect}\label{senior-devops-architect}
+
+\textbf{Job Title:} Sr.~Solutions Architect, DevOps\\
+\textbf{Dates:} February 2019 - January 2022\\
+\textbf{Location:} Raleigh, North Carolina - On-site
+
+\begin{itemize}
+\tightlist
+\item
+  Introduced first-of-its-kind Code Analytics tool to measure software
+  delivery performance (quality, security, and release metrics) for over
+  approximately 17K unique software, enabling 1K+ engineers to track
+  progress on DevSecOps metrics.
+\item
+  Increased adoption of Cisco IT CI/CD practices for software delivery
+  to 90\% across the organization.
+\item
+  Boosted the percentage of IT applications deployed into production
+  with unit tests from 7\% to 66\% and improved unit test coverage for
+  applications by 600\%.
+\item
+  Led event-driven microservices architecture build using a Java
+  SpringBoot, Kafka, Redis, and Angular UX stack.
+\end{itemize}
+
+\paragraph{DevOps Architect}\label{devops-architect}
+
+\textbf{Job Title:} IT Architect, DevOps\\
+\textbf{Dates:} January 2018 - February 2019\\
+\textbf{Location:} Raleigh, North Carolina - On-site
+
+\begin{itemize}
+\tightlist
+\item
+  Drove delivery of approximately 50K software promotions to higher
+  lifecycle environments by creating Code Release as a single software
+  release orchestrator to deliver software using any deployment tool
+  anywhere.
+\item
+  Grew total raw Production Deployments number by 90\% and increased
+  median daily Production Deployments by approximately 300\% to
+  approximately 100 per day.
+\item
+  Reduced software promotion times to approximately 10 minutes, which
+  improved Deployment Frequency DORA metrics for Cisco IT.
+\item
+  Led event-driven microservices architecture build using a Java
+  SpringBoot, Kafka, Redis, Argo Workflow, and React-based UX stack.
+\end{itemize}
+
+\paragraph{DevOps Architect}\label{devops-architect-1}
+
+\textbf{Job Title:} IT Architect, DevOps\\
+\textbf{Dates:} March 2016 - January 2018\\
+\textbf{Location:} Raleigh, North Carolina - On-site
+
+\begin{itemize}
+\tightlist
+\item
+  Led Cisco IT's first-ever Software Developer Experience Portal as a
+  Thought Leader, Evangelist, and Solutions Architect. The Software
+  Developer Experience removes friction and contextual work for the
+  developer, allowing them to continue to focus on building software.
+\item
+  Improved the Lead Time for Changes DORA metric by reducing
+  self-service requests to approximately 5 minutes, resulting in the
+  self-service of approximately 22K CRUD requests across 4K+ unique
+  Software Engineers using Code Console in 2018.
+\item
+  Oversaw event-driven Microservices architecture built using Java
+  SpringBoot, MongoDB, Redis, and React-based UX stack.
+\end{itemize}
+
+\paragraph{DevOps Architect}\label{devops-architect-2}
+
+\textbf{Job Title:} IT Architect, API Management\\
+\textbf{Dates:} February 2014 - March 2016\\
+\textbf{Location:} Raleigh, North Carolina - On-site
+
+\begin{itemize}
+\tightlist
+\item
+  Launched Cisco IT's first Continuous Delivery Platform with a mix of
+  open-source and commercial tools, resulting in approximately 90\%
+  adoption of CI/CD tools and mature software engineering practices to
+  deliver software.
+\item
+  Partnered with Cisco IT Delivery Organizations to successfully deliver
+  an enterprise-wide Continuous Delivery solution that scaled across
+  approximately 100 IT Services and approximately 2,000 IT Applications.
+\item
+  Enhanced deployment of IT Apps into production with Unit Tests from
+  less than 10\% to 60\%+ by building a homegrown solution to handle
+  continuous delivery of Oracle software, addressing a gap in Oracle's
+  existing offerings. This solution is currently used by 90\% of Cisco
+  teams for 100+ deployments a day.
+\item
+  Delivered a series of core DevOps tools including GitHub SaaS, GitHub
+  Enterprise, CloudBees Jenkins, Artifactory, SonarQube, Spinnaker, and
+  CloudBees CDRO.
+\end{itemize}
+
+\paragraph{Information Technology System
+Architect}\label{information-technology-system-architect}
+
+\textbf{Dates:} July 2010 - February 2014\\
+\textbf{Location:} Raleigh, North Carolina - On-site
+
+No detailed description was surfaced in the current LinkedIn profile.
+
+\paragraph{Information Technology Technical
+Lead}\label{information-technology-technical-lead}
+
+\textbf{Job Title:} IT Technical Leader, Web 2.0 (Customer Advocacy IT
+Team)\\
+\textbf{Dates:} September 2005 - July 2010\\
+\textbf{Location:} San Jose, California - On-site
+
+No detailed description was surfaced in the current LinkedIn profile.
+
+\paragraph{Information Technology
+Engineer}\label{information-technology-engineer}
+
+\textbf{Job Title:} IT Software Engineer (Cisco Advanced Services IT
+Team)\\
+\textbf{Dates:} August 2001 - September 2005\\
+\textbf{Location:} San Jose, California - On-site
+
+\begin{itemize}
+\tightlist
+\item
+  Architected and designed web-based applications for the Advanced
+  Services business unit.
+\item
+  Developed web-based application services on the J2EE platform,
+  primarily using open-source MVC frameworks such as Struts and WebWork.
+\item
+  Continued to act in the capacity of System Administrator of the
+  Professional Services Automation application. Member of the core team
+  responsible for both the US and Global launch of this application.
+\item
+  Provided 24x7 systems and application administrative support to all
+  AS-IT applications, including ASA (Advanced Services Automation) and
+  ASAP (Advanced Services Account Portal).
+\end{itemize}
+
+\paragraph{Information Technology
+Analyst}\label{information-technology-analyst}
+
+\textbf{Dates:} February 2001 - August 2001
+
+\begin{itemize}
+\tightlist
+\item
+  Responsible for understanding business needs and assisted in authoring
+  business requirements documents (BRDs).
+\item
+  Worked with the Technical Lead in authoring Systems Requirement
+  Documents (SRDs).
+\item
+  Assisted in the formulation of testing and quality assurance scripts
+  and plans for applications.
+\end{itemize}
+
+\subsubsection{Avaya}\label{avaya}
+
+\paragraph{Web Architect}\label{web-architect}
+
+\textbf{Dates:} March 2000 - February 2001
+
+The New Technology/Architecture group architected the various components
+of the e-business infrastructure. It was also responsible for
+researching new technologies with the aim of building world-class
+e-business services for customers.
+
+\begin{itemize}
+\tightlist
+\item
+  Researched ways to make Avaya's e-business applications WAP-enabled
+  and researched new publishing frameworks based on Java and XSLT
+  technologies.
+\end{itemize}
+
+\subsubsection{Lucent Technologies}\label{lucent-technologies}
+
+\paragraph{IT Software Engineer}\label{it-software-engineer}
+
+\textbf{Dates:} January 1999 - February 2001
+
+\begin{itemize}
+\tightlist
+\item
+  Played a lead role in designing and developing Lucent's first Single
+  Sign-on solution for external web applications, leveraging the
+  Netegrity SiteMinder solution.
+\end{itemize}
+
+\paragraph{Web Technical Leader}\label{web-technical-leader}
+
+\textbf{Dates:} February 1999 - March 2000
+
+Customer Self Support (support.lucent.com) was an extremely busy site.
+As the lead developer of the first SSO pilot, took on the added
+responsibility of leading the effort to migrate the entire application
+into an NES presentation layer, NAS (Netscape Application Server)
+business-logic layer, and Oracle 7.3.x data layer framework.
+
+\begin{itemize}
+\tightlist
+\item
+  Led a team of three developers and rewrote all server-side programs
+  into Java applogics.
+\item
+  Administered the development NES/NAS/Oracle environment for the CSS
+  project.
+\end{itemize}
+
+\subsubsection{Arizona State University}\label{arizona-state-university}
+
+\paragraph{IS Lab Lead}\label{is-lab-lead}
+
+\textbf{Dates:} May 1996 - December 1998
+
+The IS Lab catered to the technology needs of Arizona State instructors
+and students. It focused on helping the community embrace new and
+upcoming technologies in education.
+
+\begin{itemize}
+\tightlist
+\item
+  Worked on projects involving web applications, proofs of concept for
+  new technologies and products, and helping IS Lab customers get
+  introduced to them.
+\end{itemize}
+
+\subsection{Education}\label{education}
+
+\subsubsection{Master of Computer Science, Software
+Engineering}\label{master-of-computer-science-software-engineering}
+
+Arizona State University - Tempe, AZ
+
+\subsubsection{Master of Science, Industrial
+Engineering}\label{master-of-science-industrial-engineering}
+
+Arizona State University - Tempe, AZ
+
+\subsection{Awards and Presentations}\label{awards-and-presentations}
+
+\subsubsection{2018 Gold Stevie Winner}\label{gold-stevie-winner}
+
+Enterprise Software Release Digitization, Secure DevOps
+
+\subsubsection{Cisco Live 2016}\label{cisco-live-2016}
+
+Panel discussion: ``Addressing the What's, Why's and How's in the New
+World of DevOps''
+
+\subsubsection{Cisco Live 2017}\label{cisco-live-2017}
+
+Presentation: ``Enterprise Class Continuous Delivery''
+
+\subsubsection{Cloud Identity Summit 2012 - Vail,
+CO}\label{cloud-identity-summit-2012---vail-co}
+
+Presentation:
+\href{https://www.slideshare.net/slideshow/who-says-elephant-cant-dance/13698356?utm_source=clipboard_share_button&utm_campaign=slideshare_make_sharing_viral_v2&utm_variation=variant&utm_medium=share}{``Who
+Says Elephant Can't Dance? Securely Externalizing APIs @ Cisco''} hosted
+by Ping Identity
+
+\end{document}
