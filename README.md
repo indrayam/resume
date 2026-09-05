@@ -1,4 +1,4 @@
 # Resume
 
-Markdown and blog aligned version of my resume on Linkedin. That's it. Nothing
+My [blog](https://indrayam.com) aligned version of my resume on Linkedin. That's it. Nothing
 to see here.
