@@ -10,10 +10,62 @@ Author URI: http://indrayam.com/
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700;800;900&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700;6..72,800;6..72,900&family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
 
+/* Shared responsive baseline for every page in this project. */
+html {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+img,
+svg,
+video,
+canvas {
+	max-width: 100%;
+	height: auto;
+}
+
+iframe,
+object,
+embed {
+	max-width: 100%;
+}
+
+.post iframe,
+.post object,
+.post embed {
+	display: block;
+	width: 100%;
+}
+
+table {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+.post table {
+	display: block;
+	width: 100%;
+	overflow-x: auto;
+}
+
+pre,
+code,
+a {
+	max-width: 100%;
+	overflow-wrap: anywhere;
+}
 
 
 body {
 	margin: 0px 0px 5px 0px;
+	max-width: 100%;
+	overflow-x: hidden;
 	color: #333333;
 	font-family: "PT Serif", Georgia, "Times New Roman", serif;
 	font-size: 17px;
@@ -77,7 +129,7 @@ a:hover {
 blockquote
 {
 	font: normal 17px/1.6 Lora, Georgia, "Times New Roman", serif;
-	margin: 1.2em 45px 1.4em 45px;
+	margin: 1.2em clamp(10px, 5vw, 45px) 1.4em;
 	border: 1px solid #EBD4C8;
 	border-left: 4px solid #e7651a;
 	padding: 12px 16px 10px 16px;
@@ -104,7 +156,7 @@ blockquote cite a {
 	font: italic 11pt Georgia, "Times New Roman", Times, serif;
 	line-height: 1.55;
 	text-align: left;
-	margin: 1.2em 45px 1.4em 45px;
+	margin: 1.2em clamp(10px, 5vw, 45px) 1.4em;
 	border: 1px solid #cbd5d8;
 	border-left: 4px solid #8fa6ad;
 	padding: 12px 16px 10px 16px;
@@ -124,8 +176,9 @@ pre
 	border: 1px solid #e7651a; 
 	border-left: 1px solid #e7651a; 
 	padding: 5px 5px 5px 10px;
-        background-color: #FFFFCC;
-        overflow: auto;
+	background-color: #FFFFCC;
+	overflow: auto;
+	max-width: 100%;
 }
 
 /* Classes for items used more than once */
@@ -133,14 +186,18 @@ pre
 .post{
 	margin-top: 24pt;
 	margin-bottom: 10pt;
-	margin-left: 72pt;
-	margin-right: 72pt;
 	background-color: #FFFFFF;
 	border-left:1px solid #808080;
 	border-right:1px solid #808080;
 	border-bottom:1px solid #808080;
 	border-top:1px solid #808080;
 	padding:15px;
+	width: calc(100% - 20px);
+	max-width: 760px;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 0;
+	overflow-wrap: anywhere;
 }
 
 .flickr-photo { 
@@ -163,14 +220,18 @@ pre
 .comment {
 	margin-top: 24pt;
 	margin-bottom: 10pt;
-	margin-left: 72pt;
-	margin-right: 72pt;
 	background-color: #FCF7F4;
 	border-left:1px solid #EBD4C8;
 	border-right:1px solid #EBD4C8;
 	border-bottom:1px solid #EBD4C8;
 	border-top:1px solid #EBD4C8;
 	padding:15px;
+	width: calc(100% - 20px);
+	max-width: 760px;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 0;
+	overflow-wrap: anywhere;
 }
 
 .commententry{
@@ -220,6 +281,7 @@ pre
 #sidebar{
 	float:right;
 	width : 200px;
+	max-width: 100%;
 	background-color: #FFFFFF;
 	border-left:1px solid #000000;
 	border-right:1px solid #000000;
@@ -233,9 +295,13 @@ pre
 #header{
 	margin-top: 24pt;
 	margin-bottom: 10pt;
-	margin-left: 72pt;
-	margin-right: 52pt;
 	padding-top: 1px;
+	width: calc(100% - 20px);
+	max-width: 760px;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 0;
+	overflow-wrap: anywhere;
 }
 
 /* Keep the legacy header portrait overlapping the first content panel. */
@@ -249,12 +315,22 @@ pre
 
 #topnav{
 	font-size: 90%;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 #myPic{
 	padding-right:12px;
 	float:left;
 	margin-left: 12pt;
+}
+
+#myPic img {
+	display: block;
+	width: 120px;
+	max-width: 100%;
+	height: auto;
+	border: 1px solid #000000;
 }
 
 #commentmeta{
@@ -276,9 +352,10 @@ pre
 
 .aboutme {
 	font: normal 10pt Georgia, "Times New Roman", Times, serif;
-	margin-left: 50px; 
-	margin-right: 10px; 
+	margin-left: clamp(10px, 5vw, 50px);
+	margin-right: clamp(10px, 5vw, 50px);
 	padding: 5px 5px 5px 10px;
+	max-width: 100%;
 }
 
 .right {
@@ -303,7 +380,8 @@ pre
 	margin-right: 10px;
         border: 1px solid  #ff9900;
         background: #ffffcc;
-        width: 90%;
+	width: auto;
+	max-width: 100%;
         text-align: center;
 } 
 
@@ -329,9 +407,6 @@ pre
         font-size: 115%;
         font-weight: normal;
         color: black;
-}
-
-
 }
 
 .alt {
@@ -448,34 +523,6 @@ li {
 	padding: 0;
 }
 
-/* ── Wide-screen width constraints ───────────────────────────────────────── */
-/* The legacy theme used fixed pt margins which makes content span too wide. */
-@media screen and (min-width: 900px) {
-	body {
-		/* keep the orange top border behavior but center content area below */
-	}
-	#header {
-		margin-left: auto !important;
-		margin-right: auto !important;
-		max-width: 60% !important;
-	}
-	.post {
-		margin-left: auto !important;
-		margin-right: auto !important;
-		max-width: 60% !important;
-	}
-}
-
-/* Trial a shared narrower long-form reading column on the resume pages only. */
-@media screen and (min-width: 900px) {
-	body.resume-site #header,
-	body.resume-site .post,
-	body.architect-site #header,
-	body.architect-site .post {
-		box-sizing: border-box;
-		max-width: 760px !important;
-	}
-}
 /* ── Collapsible category archive ─────────────────────────────────── */
 .archives-page details.category-group,
 .archives-page details.archive-year-group {
@@ -536,15 +583,38 @@ li {
 	font-weight: normal;
 }
 
-
-/* On narrow screens, fall back to nearly full width. */
+/* Match the legacy site's natural float flow on narrower viewports. */
 @media screen and (max-width: 899px) {
-	#header, .post {
+	#header,
+	.post {
+		width: auto !important;
+		max-width: none !important;
 		margin-left: 10px !important;
 		margin-right: 10px !important;
-		max-width: none !important;
+	}
+
+	#sidebar {
+		float: none;
+		width: auto;
+		max-width: none;
+		margin: 1rem 10px;
+	}
+
+	#myPic {
+		margin-left: 0;
+	}
+
+	.post {
+		padding: 12px;
+	}
+
+	blockquote,
+	.archival-note {
+		margin-left: 0.5rem;
+		margin-right: 0.5rem;
 	}
 }
+
 
 /* Resume page additions. The surrounding chrome intentionally remains the
    same as the v1 blog: the resume is another post on the same site. */
@@ -696,6 +766,7 @@ body.architect-site #header + .post.article-page {
 	font-size: 1.2em;
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	gap: 0.65em;
 	margin-top: 1.25em;
 	margin-bottom: 0.35em;
@@ -709,6 +780,10 @@ body.architect-site #header + .post.article-page {
 	justify-content: center;
 	flex: 0 0 auto;
 	line-height: 1;
+}
+
+.resume-page h3.resume-employer > span:last-child {
+	min-width: 0;
 }
 
 .resume-brand-cisco {
@@ -816,13 +891,63 @@ body.architect-site #header + .post.article-page {
 }
 
 @media screen and (max-width: 600px) {
+	body {
+		font-size: 16px;
+	}
+
+	#header {
+		text-align: left;
+		margin-top: 16pt;
+	}
+
+	#myPic {
+		float: left;
+		margin-left: 0;
+	}
+
+	#topnav {
+		line-height: 1.7;
+	}
+
+	blockquote,
+	.archival-note {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 10px 12px;
+	}
+
+	.flickr-frame,
+	.flickrEmailImage,
+	.aboutme-photo {
+		float: none;
+		display: block;
+		margin: 1em auto;
+	}
+
+	.poem {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
 	.resume-page {
 		padding: 15px 10px;
+	}
+
+	.resume-actions {
+		position: static;
+		justify-content: flex-end;
+		margin-bottom: 0.5em;
 	}
 
 	.resume-contact {
 		font-size: 0.82em;
 		gap: 0.55em 1em;
+	}
+
+	.resume-contact a,
+	.resume-contact-item {
+		min-width: 0;
+		white-space: normal;
 	}
 
 	.resume-page h2 {
