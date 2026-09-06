@@ -626,7 +626,7 @@ li {
 .resume-contact-item {
 	display: inline-flex;
 	align-items: center;
-	gap: 0.45em;
+	gap: 4px;
 	color: #333333;
 	white-space: nowrap;
 }
