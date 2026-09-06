@@ -8,7 +8,7 @@ Author URI: http://indrayam.com/
 
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700;800;900&family=PT+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700;800;900&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700;6..72,800;6..72,900&family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
 
 
 
@@ -465,6 +465,17 @@ li {
 		max-width: 60% !important;
 	}
 }
+
+/* Trial a shared narrower long-form reading column on the resume pages only. */
+@media screen and (min-width: 900px) {
+	body.resume-site #header,
+	body.resume-site .post,
+	body.architect-site #header,
+	body.architect-site .post {
+		box-sizing: border-box;
+		max-width: 760px !important;
+	}
+}
 /* ── Collapsible category archive ─────────────────────────────────── */
 .archives-page details.category-group,
 .archives-page details.archive-year-group {
@@ -539,6 +550,10 @@ li {
    same as the v1 blog: the resume is another post on the same site. */
 .resume-page {
 	padding: 20px;
+	font-family: Newsreader, Georgia, "Times New Roman", serif;
+	font-size: 19.2px;
+	line-height: 1.5;
+	color: #1f1f1d;
 }
 
 .resume-identity {
@@ -585,6 +600,12 @@ li {
 	margin-top: 24pt;
 }
 
+/* Restore the legacy portrait overlap on the Architect page. */
+body.architect-site #header + .post.article-page {
+	clear: none;
+	margin-top: -10pt;
+}
+
 .architect-book {
 	margin: 1.4em 0 2em;
 	text-align: center;
@@ -602,7 +623,7 @@ li {
 }
 
 .resume-identity h1 {
-	font-family: Lora, Georgia, "Times New Roman", serif;
+	font-family: "Source Sans Pro", Arial, sans-serif;
 	font-size: clamp(1.875rem, 3.75vw, 2.9rem);
 	font-weight: 900;
 	letter-spacing: 0;
@@ -618,8 +639,9 @@ li {
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 0.55em 1em;
-	font-family: Courier, "Courier New", monospace;
-	font-size: 0.9em;
+	font-family: Newsreader, Georgia, "Times New Roman", serif;
+	font-size: 0.8em;
+	line-height: normal;
 }
 
 .resume-contact a,
@@ -627,7 +649,7 @@ li {
 	display: inline-flex;
 	align-items: center;
 	gap: 4px;
-	color: #333333;
+	color: #1f1f1d;
 	white-space: nowrap;
 }
 
@@ -651,6 +673,8 @@ li {
 }
 
 .resume-page h2 {
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-weight: 900;
 	color: #e7651a;
 	font-size: 1.1em;
 	letter-spacing: 0.03em;
@@ -666,8 +690,9 @@ li {
 }
 
 .resume-page h3.resume-employer {
-	color: #333333;
-	font-family: Lora, Georgia, "Times New Roman", serif;
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-weight: 900;
+	color: #1f1f1d;
 	font-size: 1.2em;
 	display: flex;
 	align-items: center;
@@ -730,8 +755,9 @@ li {
 }
 
 .resume-page h4 {
-	color: #333333;
-	font-family: Lora, Georgia, "Times New Roman", serif;
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-weight: 900;
+	color: #1f1f1d;
 	font-size: 1em;
 	margin-top: 1em;
 	margin-bottom: 0.12em;
@@ -749,12 +775,13 @@ li {
 
 .resume-page .resume-meta {
 	color: #808080;
-	font-size: 0.9em;
+	font-size: 0.8em;
+	line-height: normal;
 	margin: 0 0 0.5em;
 }
 
 .resume-page .resume-meta strong {
-	color: #333333;
+	color: #1f1f1d;
 }
 
 .resume-page ul {
@@ -773,7 +800,7 @@ li {
 
 .resume-page .resume-note {
 	color: #666666;
-	font-size: 0.9em;
+	font-size: 0.8em;
 	font-style: italic;
 }
 
@@ -783,8 +810,9 @@ li {
 
 .resume-page .resume-skill-group strong {
 	color: #e7651a;
-	font-family: Lora, Georgia, "Times New Roman", serif;
-	font-style: italic;
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-style: normal;
+	font-weight: 700;
 }
 
 @media screen and (max-width: 600px) {
