@@ -10,6 +10,28 @@ Author URI: http://indrayam.com/
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700;800;900&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700;6..72,800;6..72,900&family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
 
+/* Shared visual vocabulary with the main site. */
+:root {
+	--color-text: #333333;
+	--color-heading: #333333;
+	--color-content: #1f1f1d;
+	--color-muted: #808080;
+	--color-faint: #999999;
+	--color-link: #990000;
+	--color-accent: #e7651a;
+	--color-panel: #ffffff;
+	--color-panel-alt: #fcf7f4;
+	--color-border: #808080;
+	--color-border-light: #cccccc;
+	--color-quote-border: #ebd4c8;
+	--color-archive-border: #cbd5d8;
+	--color-archive-accent: #8fa6ad;
+	--font-site-body: "PT Serif", Georgia, "Times New Roman", serif;
+	--font-content: Newsreader, Georgia, "Times New Roman", serif;
+	--font-heading: Lora, Georgia, "Times New Roman", serif;
+	--font-ui: "Source Sans Pro", Arial, sans-serif;
+}
+
 /* Shared responsive baseline for every page in this project. */
 html {
 	max-width: 100%;
@@ -63,77 +85,75 @@ a {
 
 
 body {
-	margin: 0px 0px 5px 0px;
+	margin: 0 0 5px;
 	max-width: 100%;
 	overflow-x: hidden;
-	color: #333333;
-	font-family: "PT Serif", Georgia, "Times New Roman", serif;
+	color: var(--color-text);
+	font-family: var(--font-site-body);
 	font-size: 17px;
 	background-image: url("./images/blue-dash.gif");
-	border-top: 10px solid #e7651a;
+	border-top: 10px solid var(--color-accent);
 }
 
-h1{
-	font-family: Lora, Georgia, "Times New Roman", serif;
+h1 {
+	font-family: var(--font-heading);
+	font-size: 2em;
 	font-weight: 900;
+	line-height: normal;
 	margin-top: 0pt;
 	margin-bottom: 0pt;
 	padding-top: 1pt;
 }
 
-h2{
-	font-family: Lora, Georgia, "Times New Roman", serif;
+h2 {
+	font-family: var(--font-heading);
+	font-size: 1.5em;
 	font-weight: 700;
+	line-height: normal;
 	margin-top: 0pt;
 	margin-bottom: 5pt;
 	padding-top: 0pt;
 	border-style: none none dashed none;
-	border-color: #CCCCCC;
+	border-color: var(--color-border-light);
 	border-width: 0 0 1px 0;
 }
 
-h2 a  {
-	color: #333333;
+h2 a {
+	color: var(--color-heading);
 	text-decoration: none;
 }
 
-h2 a:hover {
-	color: #333333;
-	text-decoration: none;
-}
-
-h3{
+h3 {
+	font-size: 1.17em;
 	font-weight: normal;
-	color: #808080;
+	line-height: normal;
+	color: var(--color-muted);
 	margin-top: 0pt;
 	padding-top: 0pt;
 }
 
-h4{
+h4 {
+	font-size: 1em;
 	font-weight: bold;
-	color: #808080;
+	line-height: normal;
+	color: var(--color-muted);
 	margin-top: 0pt;
 	margin-bottom: 0pt;
 	padding-top: 0pt;
 }
 
 a {
-       color:#900;
+	color: var(--color-link);
 	text-decoration: underline;
 }
 
-a:hover {
-	text-decoration: underline;
-}
-
-blockquote
-{
-	font: normal 17px/1.6 Lora, Georgia, "Times New Roman", serif;
+blockquote {
+	font: normal 17px/1.6 var(--font-heading);
 	margin: 1.2em clamp(10px, 5vw, 45px) 1.4em;
-	border: 1px solid #EBD4C8;
-	border-left: 4px solid #e7651a;
+	border: 1px solid var(--color-quote-border);
+	border-left: 4px solid var(--color-accent);
 	padding: 12px 16px 10px 16px;
-	background-color: #FCF7F4;
+	background-color: var(--color-panel-alt);
 }
 
 blockquote p {
@@ -143,13 +163,13 @@ blockquote p {
 blockquote cite {
 	display: block;
 	margin-top: 10px;
-	font: italic 14px/1.5 "PT Serif", Georgia, "Times New Roman", serif;
-	color: #666;
+	font: italic 14px/1.5 var(--font-site-body);
+	color: #666666;
 	text-align: right;
 }
 
 blockquote cite a {
-	color: #900;
+	color: var(--color-link);
 }
 
 .archival-note {
@@ -157,8 +177,8 @@ blockquote cite a {
 	line-height: 1.55;
 	text-align: left;
 	margin: 1.2em clamp(10px, 5vw, 45px) 1.4em;
-	border: 1px solid #cbd5d8;
-	border-left: 4px solid #8fa6ad;
+	border: 1px solid var(--color-archive-border);
+	border-left: 4px solid var(--color-archive-accent);
 	padding: 12px 16px 10px 16px;
 	background-color: #f4f7f7;
 	color: #59666a;
@@ -168,29 +188,25 @@ blockquote cite a {
 	margin: 0;
 }
 
-pre
-{
+pre {
 	font: normal 9pt courier, sans-serif;
 	margin-left: 10px; 
 	margin-right: 10px; 
-	border: 1px solid #e7651a; 
-	border-left: 1px solid #e7651a; 
+	border: 1px solid var(--color-accent);
+	border-left: 1px solid var(--color-accent);
 	padding: 5px 5px 5px 10px;
 	background-color: #FFFFCC;
 	overflow: auto;
 	max-width: 100%;
 }
 
-/* Classes for items used more than once */
+/* Reusable content components */
 
-.post{
+.post {
 	margin-top: 24pt;
 	margin-bottom: 10pt;
-	background-color: #FFFFFF;
-	border-left:1px solid #808080;
-	border-right:1px solid #808080;
-	border-bottom:1px solid #808080;
-	border-top:1px solid #808080;
+	background-color: var(--color-panel);
+	border: 1px solid var(--color-border);
 	padding:15px;
 	width: calc(100% - 20px);
 	max-width: 760px;
@@ -198,101 +214,19 @@ pre
 	margin-right: auto;
 	min-width: 0;
 	overflow-wrap: anywhere;
-}
-
-.flickr-photo { 
-        border: solid 1px #000000; 
-}
-
-.flickr-frame {	
-       float: right; 
-       margin-left: 15px; 
-       margin-bottom: 15px; 
-}
-
-.flickrEmailImage {	
-       float: left;
-       margin-right: 15px;
-       margin-bottom: 15px;
-       border: solid 1px #000000;
-}
-
-.comment {
-	margin-top: 24pt;
-	margin-bottom: 10pt;
-	background-color: #FCF7F4;
-	border-left:1px solid #EBD4C8;
-	border-right:1px solid #EBD4C8;
-	border-bottom:1px solid #EBD4C8;
-	border-top:1px solid #EBD4C8;
-	padding:15px;
-	width: calc(100% - 20px);
-	max-width: 760px;
-	margin-left: auto;
-	margin-right: auto;
-	min-width: 0;
-	overflow-wrap: anywhere;
-}
-
-.commententry{
-	background-color: #FFFFFF;
-	border-left:1px solid #808080;
-	border-right:1px solid #808080;
-	border-bottom:1px solid #808080;
-	border-top:1px solid #808080;
-	padding:15px;
-}
-
-.commententryauthor{
-	background-color: #FFFFFF;
-	border-left:3px solid #900;
-	border-right:1px solid #808080;
-	border-bottom:1px solid #808080;
-	border-top:1px solid #808080;
-	padding:15px;
-}
-
-
-.postlinks{
-	text-align: right;
-	font-size:90%;
-}
-
-.time{
-	font-family: Courier, monospace;
 }
 
 .copyright {
-	font-family: "PT Serif", Georgia, "Times New Roman", serif;
+	font-family: var(--font-site-body);
 	font-size: 11px;
 	margin-top: 5px;
 	text-align:center;
-	color:#999;
+	color: var(--color-faint);
 }
 
-.note {
-	font-family: "PT Serif", Georgia, "Times New Roman", serif;
-	font-size: 12px;
-	color:#900;
-}
+/* Shared site chrome and page hooks */
 
-/* IDs only occur once per page */
-
-#sidebar{
-	float:right;
-	width : 200px;
-	max-width: 100%;
-	background-color: #FFFFFF;
-	border-left:1px solid #000000;
-	border-right:1px solid #000000;
-	border-bottom:1px solid #000000;
-	border-top:1px solid #000000;
-	padding:15px;
-	margin-top:60px;
-	margin-left:25px;
-}
-
-#header{
+#header {
 	margin-top: 24pt;
 	margin-bottom: 10pt;
 	padding-top: 1px;
@@ -313,13 +247,13 @@ pre
 	clear: both;
 }
 
-#topnav{
+#topnav {
 	font-size: 90%;
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
 
-#myPic{
+#myPic {
 	padding-right:12px;
 	float:left;
 	margin-left: 12pt;
@@ -333,256 +267,6 @@ pre
 	border: 1px solid #000000;
 }
 
-#commentmeta{
-	font-size:85%;
-}
-
-#postdates{
-	text-align: right;
-	font-size:85%;
-}
-
-#edit{
-	text-align: center;
-}
-
-#strike{
-   text-decoration: line-through;
-}
-
-.aboutme {
-	font: normal 10pt Georgia, "Times New Roman", Times, serif;
-	margin-left: clamp(10px, 5vw, 50px);
-	margin-right: clamp(10px, 5vw, 50px);
-	padding: 5px 5px 5px 10px;
-	max-width: 100%;
-}
-
-.right {
-       text-align: right;
-}
-
-#code {
-       font-family: "Courier New", Courier, sans-serif;
-       font-weight: normal;
-       font-size: 10pt;
-       color: #3232cd;
-}
-
-#codeflow {
-       font-family: "Courier New", Courier, sans-serif;
-       font-weight: normal;
-}
-
-.poem {
-        font: italic 1.5em "monotype corsiva", Georgia, Serif;
-	margin-left: 10px; 
-	margin-right: 10px;
-        border: 1px solid  #ff9900;
-        background: #ffffcc;
-	width: auto;
-	max-width: 100%;
-        text-align: center;
-} 
-
-.poem h2 {
-        font-family: "monotype corsiva", Georgia, Serif;
-        font-size: 105%;
-        font-weight: bold;  
-	margin-left: 10px; 
-	margin-right: 10px;
-        text-align: center; 
-        border-width: 0 0 0 0;
-}
-
-#marriage-bold {
-        font-family: "monotype corsiva", Georgia, Serif;
-        font-size: 130%;
-        font-weight: normal;
-        color: red;
-}
-
-#marriage {
-        font-family: "monotype corsiva", Georgia, Serif;
-        font-size: 115%;
-        font-weight: normal;
-        color: black;
-}
-
-.alt {
-        background-color: #FAFAF0 !important;
-}
-
-.small {
-        font-size: 0.9em;
-        color: #999;
-}
-
-ul {
-        padding: 0;
-        margin: 0;
-}
-
-li {
-        list-style: none;
-}
-
-.date {
-	position: absolute;
-	background: url(/images/calendar.png);
-	height: 67px;
-	width: 59px;
-	font-family: Arial, Helvetica, sans-serif;
-	color: white;
-	margin: 0;
-}
-
-.date .month, .date .day {
-	text-align: center;
-	width: 59px;
-}
-.date .month {
-	overflow: hidden;
-	font-size: 13px;
-	position: absolute;
-	margin-top: 42px;
-	text-transform: uppercase;
-}
-
-.date .day {
-	font-weight: bold;
-	font-size: 30px;
-	line-height: 32px;
-	position: absolute;
-	margin-top: 11px;
-}
-
-.date .year {
-	display: none;
-}
-
-/* ── About Me page ─────────────────────────────────────────────────── */
-.aboutme-page {
-	padding: 20px 20px 24px 20px;
-}
-
-.aboutme-photo {
-	float: left;
-	margin: 4px 18px 12px 0;
-	max-width: 160px;
-}
-
-/* ── Archives page ──────────────────────────────────────────────────── */
-.archives-page h3 {
-	margin-top: 24px;
-	margin-bottom: 4px;
-	padding-bottom: 2px;
-	border-bottom: 1px dashed #ccc;
-}
-
-.archive-legend {
-	margin: 0 0 20px 0;
-	padding: 8px 12px;
-	border-left: 3px solid #9b8f87;
-	background-color: #f5f2ef;
-	color: #59666a;
-	font-size: 0.9em;
-}
-
-.archive-marker {
-	color: #8a6d5a;
-	font-weight: bold;
-}
-
-.archives-page li.archive-degraded::before {
-	content: "*";
-	color: #8a6d5a;
-	font-weight: bold;
-	display: inline-block;
-	width: 0.8em;
-}
-
-.archives-page li.archive-degraded a {
-	color: #7e4f3a;
-}
-
-.archives-page ul {
-	margin: 0 0 0 20px;
-	padding: 0;
-}
-
-.archives-page li {
-	list-style: none;
-	margin: 2px 0;
-	line-height: 1.5;
-}
-
-.aboutme-page .aboutme {
-	font: inherit;
-	margin: 0;
-	padding: 0;
-}
-
-/* ── Collapsible category archive ─────────────────────────────────── */
-.archives-page details.category-group,
-.archives-page details.archive-year-group {
-	margin-top: 24px;
-}
-
-.archives-page details.category-group:first-of-type,
-.archives-page details.archive-year-group:first-of-type {
-	margin-top: 0;
-}
-
-.archives-page details.category-group summary,
-.archives-page details.archive-year-group summary {
-	display: block;
-	position: relative;
-	margin-bottom: 4px;
-	padding: 2px 0 2px 1.2em;
-	border-bottom: 1px dashed #ccc;
-	font-size: 1.17em;
-	font-weight: bold;
-	cursor: pointer;
-	list-style: none;
-}
-
-.archives-page details.category-group summary::-webkit-details-marker,
-.archives-page details.archive-year-group summary::-webkit-details-marker {
-	display: none;
-}
-
-.archives-page details.category-group summary::marker,
-.archives-page details.archive-year-group summary::marker {
-	content: "";
-}
-
-.archives-page details.category-group summary::before,
-.archives-page details.archive-year-group summary::before {
-	content: "";
-	position: absolute;
-	left: 0.25em;
-	top: 0.42em;
-	width: 0.4em;
-	height: 0.4em;
-	border-right: 1px solid #8a6d5a;
-	border-bottom: 1px solid #8a6d5a;
-	transform: rotate(-45deg);
-	transition: transform 0.15s ease;
-}
-
-.archives-page details.category-group[open] summary::before,
-.archives-page details.archive-year-group[open] summary::before {
-	top: 0.3em;
-	transform: rotate(45deg);
-}
-
-.archives-page details.category-group summary .small,
-.archives-page details.archive-year-group summary .small {
-	font-size: 0.77em;
-	font-weight: normal;
-}
-
 /* Match the legacy site's natural float flow on narrower viewports. */
 @media screen and (max-width: 899px) {
 	#header,
@@ -591,13 +275,6 @@ li {
 		max-width: none !important;
 		margin-left: 10px !important;
 		margin-right: 10px !important;
-	}
-
-	#sidebar {
-		float: none;
-		width: auto;
-		max-width: none;
-		margin: 1rem 10px;
 	}
 
 	#myPic {
@@ -629,10 +306,10 @@ li {
    same as the v1 blog: the resume is another post on the same site. */
 .resume-page {
 	padding: 20px;
-	font-family: Newsreader, Georgia, "Times New Roman", serif;
+	font-family: var(--font-content);
 	font-size: 19.2px;
 	line-height: 1.5;
-	color: #1f1f1d;
+	color: var(--color-content);
 }
 
 .resume-identity {
@@ -656,13 +333,8 @@ li {
 	display: inline-flex;
 	align-items: center;
 	gap: 0.25em;
-	color: #e7651a;
+	color: var(--color-accent);
 	font-size: 0.72em;
-	text-decoration: none;
-}
-
-.resume-pdf-download:hover {
-	color: #e7651a;
 	text-decoration: none;
 }
 
@@ -702,7 +374,7 @@ body.architect-site #header + .post.article-page {
 }
 
 .resume-identity h1 {
-	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-family: var(--font-ui);
 	font-size: clamp(1.875rem, 3.75vw, 2.9rem);
 	font-weight: 900;
 	letter-spacing: 0;
@@ -718,7 +390,7 @@ body.architect-site #header + .post.article-page {
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 0.55em 1em;
-	font-family: Newsreader, Georgia, "Times New Roman", serif;
+	font-family: var(--font-content);
 	font-size: 0.8em;
 	line-height: normal;
 }
@@ -728,7 +400,7 @@ body.architect-site #header + .post.article-page {
 	display: inline-flex;
 	align-items: center;
 	gap: 4px;
-	color: #1f1f1d;
+	color: var(--color-content);
 	white-space: nowrap;
 }
 
@@ -737,7 +409,7 @@ body.architect-site #header + .post.article-page {
 }
 
 .resume-contact a:hover {
-	color: #990000;
+	color: var(--color-link);
 }
 
 .resume-contact-icon {
@@ -752,15 +424,15 @@ body.architect-site #header + .post.article-page {
 }
 
 .resume-page h2 {
-	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-family: var(--font-ui);
 	font-weight: 900;
-	color: #e7651a;
+	color: var(--color-accent);
 	font-size: 1.1em;
 	letter-spacing: 0.03em;
 	margin-top: 1.35em;
 	margin-bottom: 0.65em;
 	padding-bottom: 3px;
-	border-bottom: 1px dashed #cccccc;
+	border-bottom: 1px dashed var(--color-border-light);
 	text-transform: uppercase;
 }
 
@@ -769,9 +441,9 @@ body.architect-site #header + .post.article-page {
 }
 
 .resume-page h3.resume-employer {
-	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-family: var(--font-ui);
 	font-weight: 900;
-	color: #1f1f1d;
+	color: var(--color-content);
 	font-size: 1.2em;
 	display: flex;
 	align-items: center;
@@ -780,7 +452,7 @@ body.architect-site #header + .post.article-page {
 	margin-top: 1.25em;
 	margin-bottom: 0.35em;
 	padding-bottom: 2px;
-	border-bottom: 1px solid #808080;
+	border-bottom: 1px solid var(--color-border);
 }
 
 .resume-brand-logo {
@@ -839,9 +511,9 @@ body.architect-site #header + .post.article-page {
 }
 
 .resume-page h4 {
-	font-family: "Source Sans Pro", Arial, sans-serif;
+	font-family: var(--font-ui);
 	font-weight: 900;
-	color: #1f1f1d;
+	color: var(--color-content);
 	font-size: 1em;
 	margin-top: 1em;
 	margin-bottom: 0.12em;
@@ -858,14 +530,14 @@ body.architect-site #header + .post.article-page {
 }
 
 .resume-page .resume-meta {
-	color: #808080;
+	color: var(--color-muted);
 	font-size: 0.8em;
 	line-height: normal;
 	margin: 0 0 0.5em;
 }
 
 .resume-page .resume-meta strong {
-	color: #1f1f1d;
+	color: var(--color-content);
 }
 
 .resume-page ul {
@@ -893,8 +565,8 @@ body.architect-site #header + .post.article-page {
 }
 
 .resume-page .resume-skill-group strong {
-	color: #e7651a;
-	font-family: "Source Sans Pro", Arial, sans-serif;
+	color: var(--color-accent);
+	font-family: var(--font-ui);
 	font-style: normal;
 	font-weight: 700;
 }
@@ -923,19 +595,6 @@ body.architect-site #header + .post.article-page {
 		margin-left: 0;
 		margin-right: 0;
 		padding: 10px 12px;
-	}
-
-	.flickr-frame,
-	.flickrEmailImage,
-	.aboutme-photo {
-		float: none;
-		display: block;
-		margin: 1em auto;
-	}
-
-	.poem {
-		margin-left: 0;
-		margin-right: 0;
 	}
 
 	.resume-page {
