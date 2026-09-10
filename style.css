@@ -615,6 +615,15 @@ li {
 	}
 }
 
+/* Give large desktop screens a little more breathing room without changing
+   the existing tablet and phone layouts. */
+@media screen and (min-width: 1280px) and (hover: hover) and (pointer: fine) {
+	#header,
+	.post {
+		max-width: 840px;
+	}
+}
+
 
 /* Resume page additions. The surrounding chrome intentionally remains the
    same as the v1 blog: the resume is another post on the same site. */
