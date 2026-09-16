@@ -11,9 +11,9 @@ Staff Software Engineer, Solutions Architect, DevOps, AI-Pilled
 
 ## Summary
 
-Results-driven Senior Software Solutions [Architect]((https://resume.indrayam.com/architect.html)) who still believes the Unix terminal is the most elegant interface ever invented. I started in graduate school with a Silicon Graphic workstation running IRIX; more than two decades later, I still strive to bring the elegance and power of that machine in products that I build at Cisco. For the past decade, I have worked on building developer-centric experiences with a TAM of 30k Cisco engineers. My focus is making complex capabilities feel simple - from opinionated CI/CD pipelines, release orchestration, or multi-agent AI systems. I care deeply about the details, but I also understand the importance of zooming out - distilling the essence of the problem, its context, and its possibilities so others can see what matters.
+Results-driven Senior Software Solutions [Architect]((https://resume.indrayam.com/architect.html)) who still believes the Unix terminal is the most elegant interface ever invented. I started in graduate school with a Silicon Graphics workstation running IRIX; more than two decades later, I still strive to bring the elegance and power of that machine into products that I build at Cisco. For the past decade, I have worked on building developer-centric experiences with a TAM of 30k Cisco engineers. My focus is making complex capabilities feel simple - from opinionated CI/CD pipelines, release orchestration, to multi-agent AI systems. I care deeply about the details, but I also understand the importance of zooming out - distilling the essence of the problem, its context, and its possibilities so others can see what matters.
 
-Simply put, I like to build things that matter, evangelize the ideas behind them, and inspire the people around me to make it their best work to-date.
+Simply put, I like to build things that matter, evangelize the ideas behind them, and inspire the people around me to make it their best work to date.
 
 ## Key Achievements
 
