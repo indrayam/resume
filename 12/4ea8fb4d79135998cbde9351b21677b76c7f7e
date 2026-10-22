@@ -1,0 +1,21 @@
+README.md
+  s_491b2b6119e371::t_0a940ce14a0d8b 1,3-20
+AGENTS.md
+  s_491b2b6119e371::t_766a43817d5095 1-22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "124ea8fb4d79135998cbde9351b21677b76c7f7e",
+  "prompts": {},
+  "sessions": {
+    "s_491b2b6119e371": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a16545-0f8a-7fc0-9c14-b7e813f21adc",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "Anand Sharma <anand.sharma@gmail.com>"
+    }
+  }
+}
