@@ -331,7 +331,7 @@ pre {
 
 
 /* Resume page additions. The surrounding chrome intentionally remains the
-   same as the v1 blog: the resume is another post on the same site. */
+   same as the blog: the resume is another post on the same site. */
 .resume-page {
 	padding: 20px;
 	font-family: var(--font-content);
