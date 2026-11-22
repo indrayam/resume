@@ -83,7 +83,6 @@ a {
 	overflow-wrap: anywhere;
 }
 
-
 body {
 	margin: 0 0 5px;
 	max-width: 100%;
@@ -224,89 +223,13 @@ pre {
 	color: var(--color-faint);
 }
 
-/* Shared site chrome and page hooks */
-
-#header {
-	margin-top: 24pt;
-	margin-bottom: 10pt;
-	padding-top: 1px;
-	width: calc(100% - 20px);
-	max-width: 760px;
-	margin-left: auto;
-	margin-right: auto;
-	min-width: 0;
-	overflow-wrap: anywhere;
-}
-
-/* Keep the legacy header portrait overlapping the first content panel. */
-#header + .post {
-	margin-top: -10pt;
-}
-
-#header + .post > h2:first-child {
-	clear: both;
-}
-
-#topnav {
-	font-size: 90%;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	min-width: 0;
-	overflow-wrap: anywhere;
-}
-
-.topnav-menu > .topnav-toggle {
-	display: none;
-}
-
-.topnav-menu > .topnav-toggle-input {
-	display: none;
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	overflow: hidden;
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	white-space: nowrap;
-	border: 0;
-}
-
-.topnav-menu > .topnav-links {
-	display: block;
-}
-
-.topnav-menu .topnav-separator {
-	white-space: pre;
-}
-
-#myPic {
-	padding-right:12px;
-	float:left;
-	margin-left: 12pt;
-}
-
-#myPic img {
-	display: block;
-	width: 120px;
-	max-width: 100%;
-	height: auto;
-	border: 1px solid #000000;
-}
-
-/* Match the legacy site's natural float flow on narrower viewports. */
+/* Narrower viewports: content nearly full width with 10px insets. */
 @media screen and (max-width: 899px) {
-	#header,
 	.post {
 		width: auto !important;
 		max-width: none !important;
 		margin-left: 10px !important;
 		margin-right: 10px !important;
-	}
-
-	#myPic {
-		margin-left: 0;
 	}
 
 	.post {
@@ -323,12 +246,10 @@ pre {
 /* Give large desktop screens a little more breathing room without changing
    the existing tablet and phone layouts. */
 @media screen and (min-width: 1280px) and (hover: hover) and (pointer: fine) {
-	#header,
 	.post {
 		max-width: 840px;
 	}
 }
-
 
 /* Resume page additions. The surrounding chrome intentionally remains the
    same as the blog: the resume is another post on the same site. */
@@ -373,10 +294,6 @@ pre {
 
 .article-page {
 	clear: both;
-}
-
-#header + .post.article-page {
-	margin-top: 24pt;
 }
 
 .error-page {
@@ -431,12 +348,6 @@ pre {
 
 .error-page .error-code code {
 	font: inherit;
-}
-
-/* Restore the legacy portrait overlap on the Architect page. */
-body.architect-site #header + .post.article-page {
-	clear: none;
-	margin-top: -10pt;
 }
 
 .architect-book {
@@ -658,20 +569,6 @@ body.architect-site #header + .post.article-page {
 		font-size: 16px;
 	}
 
-	#header {
-		text-align: left;
-		margin-top: 16pt;
-	}
-
-	#myPic {
-		float: left;
-		margin-left: 0;
-	}
-
-	#topnav {
-		line-height: 1.7;
-	}
-
 	blockquote,
 	.archival-note {
 		margin-left: 0;
@@ -705,68 +602,23 @@ body.architect-site #header + .post.article-page {
 	}
 }
 
-@media screen and (max-width: 480px) {
-	.topnav-menu > .topnav-toggle-input {
-		display: block;
-	}
-
-	.topnav-menu > .topnav-toggle {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 0.5rem;
-		min-height: 2.25rem;
-		padding: 0.35rem 0.6rem;
-		border: 1px solid var(--color-border);
-		background: var(--color-panel);
-		color: var(--color-link);
-		font: inherit;
-		font-size: 90%;
-		font-weight: 700;
-		cursor: pointer;
-	}
-
-	.topnav-menu > .topnav-toggle::after {
-		content: "+";
-		font-size: 1.25em;
-		line-height: 1;
-	}
-
-	.topnav-menu > .topnav-toggle-input:checked + .topnav-toggle::after {
-		content: "−";
-	}
-
-	.topnav-menu > .topnav-toggle-input:focus-visible + .topnav-toggle {
-		outline: 2px solid var(--color-accent);
-		outline-offset: 2px;
-	}
-
-	.topnav-menu > .topnav-links {
-		display: none;
-		padding: 0.25rem 0.6rem;
-		border: 1px solid var(--color-border);
-		border-top: 0;
-		background: var(--color-panel);
-	}
-
-	.topnav-menu > .topnav-toggle-input:checked ~ .topnav-links {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	.topnav-menu .topnav-links a {
-		display: block;
-		padding: 0.3rem 0;
-	}
-
-	.topnav-menu .topnav-separator {
-		display: none;
-	}
-}
-
 @media print {
 	.resume-page .resume-role {
 		page-break-inside: avoid;
 	}
 }
+
+/* Home-style chrome, matching The Daily Diff: white page, no box, centered site links, masthead heading. */
+body { background-image: none !important; background-color: #ffffff; }
+.site-header { max-width: 760px; margin: 18px auto 14px; }
+.site-nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 22px; margin: 0; padding: 0; list-style: none; }
+.site-nav li { margin: 0; padding: 0; background: none; }
+.site-nav a { display: inline-block; padding: 4px 0; color: #111111; font-family: Fraunces, Georgia, "Times New Roman", serif; font-size: 1.05rem; font-weight: 300; line-height: 1.6; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 3px; text-underline-offset: 7px; transition: text-decoration-color 0.15s ease; }
+.site-nav a:hover, .site-nav a:focus-visible, .site-nav a[aria-current="page"] { text-decoration-color: #e7651a; }
+.site-nav a:focus-visible { outline: none; }
+.post { border: none !important; margin-top: 0 !important; }
+.page-masthead { text-align: center; padding-bottom: 0.45rem; }
+.page-masthead-name { font-family: "Source Sans Pro", Arial, sans-serif; font-weight: 900; font-size: clamp(2.5rem, 5vw, 3.85rem); letter-spacing: 0; line-height: 1.02; color: #333333; margin: 0; padding: 0; border: 0; }
+.page-masthead-tagline { font-family: Newsreader, Georgia, "Times New Roman", serif; font-size: 0.92rem; letter-spacing: 0.02em; line-height: 1.6; color: #555555; margin: 0.15rem 0 0; }
+.page-masthead-rule { height: 0; border: none; border-top: 4px double #808080; margin: 1.1rem 0 0.32rem; }
+@media screen and (max-width: 899px) { .site-header { max-width: none; margin-left: 10px; margin-right: 10px; } }
