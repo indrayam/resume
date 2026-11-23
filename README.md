@@ -26,6 +26,7 @@ The HTML page, the DOCX, and the PDF are not generated from one source. When res
 - **DOCX (current workflow).** Since November 2026 the DOCX is edited in place from the Word file, so its fonts (Montserrat), layout, and three-page structure come from the original document. The scripts are in `tools/docx-update/`, and each takes `in.docx out.docx`:
   - `edit.py` — applies the November 2026 `resume.md` edits to a copy of the Word resume by cloning existing paragraphs and runs, so formatting is unchanged. `--photo=FILE.jpg` swaps the header portrait (the current one is `references/resume-photo.jpg`) and `--move` re-flows paragraphs. It adds the sparkles icon from `icon/`.
   - `move_overview.py` — moves Career Overview and the first role to the top of page 2.
+  - `skills_nov23.py` — the November 23 sidebar edit: replaces the Dev Tools line and adds an AI Coding Harness row at the top of the EXPERIENCE (skills) list.
   - `italic.py in.docx out.docx WORD` — italicizes every occurrence of a word inside its run.
 
   `edit.py` and `move_overview.py` assert exact paragraph positions in the document version they were written for, so they record how the November edits were made rather than replay from scratch; copy and adapt them for the next round of edits. `italic.py` and `export.sh` work on any version. Always write to a copy and check the rendered pages before replacing `output/docx/`.

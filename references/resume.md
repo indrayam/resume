@@ -27,6 +27,18 @@ Simply put, I like to build things that matter, evangelize the ideas behind them
 - Oversaw development of the first Cisco API Management Platform, featuring a customer-facing API Console.
 - Invited to present at the prestigious Cisco Live 2017 and Cisco Live 2016 events on advancements in DevOps and Enterprise Class Continuous Delivery.
 
+## Technical Experience
+
+- **AI Coding Harness:** Claude, Codex, Cursor, GrokBot (Outer Loop)
+- **Public Cloud Technologies:** AWS (EC2, EKS, S3, Lambda)
+- **Architecture:** Event-driven Microservices Software
+- **Data/Event Store:** MongoDB, Postgres, Oracle, Kafka
+- **Compute:** Containers, Kubernetes, OpenStack
+- **Dev Tools:** GitHub, GitHub Actions, Artifactory, SAST/DAST
+- **Integration Platforms:** Mashery, Layers7, Boomi
+- **SaaS:** Salesforce Sales Cloud, Workday
+- **Languages of Interest:** Rust, Go
+
 ## Experience
 
 ### Cisco Systems
