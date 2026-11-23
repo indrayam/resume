@@ -11,18 +11,21 @@ Staff Software Engineer, Solutions Architect, DevOps, AI-Pilled
 
 ## Summary
 
-Results-driven Senior Software Solutions [Architect]((https://resume.indrayam.com/architect.html)) who still believes the Unix terminal is the most elegant interface ever invented. I started in graduate school with a Silicon Graphics workstation running IRIX; more than two decades later, I still strive to bring the elegance and power of that machine into products that I build at Cisco. For the past decade, I have worked on building developer-centric experiences with a TAM of 30k Cisco engineers. My focus is making complex capabilities feel simple: opinionated CI/CD pipelines, release orchestration, and multi-agent AI systems. I care about the details, but I also understand the importance of zooming out, distilling the essence of the problem, its context, and its possibilities so others can see what matters.
+Senior Staff Software Engineer and Solutions [Architect](https://resume.indrayam.com/architect.html) who builds by the Unix philosophy: do one thing well, and make things composable. It has stood the test of time for a reason, and I strive to bring that same elegance and power into the products I build.
+
+For the past decade, I have built developer platforms for Cisco's 30,000+ engineers: opinionated CI/CD pipelines, release orchestration, and, most recently, multi-agent AI systems. I typically own an initiative end to end, the way a product GM would. I define the problem and the value to the user, architect the solution, align the engineers who build it, bake adoption metrics in from day one, and champion it with senior executives and future customers until it lands. I write code, craft the story behind it, and pitch it, caring as much about the details as about zooming out so others can see the value.
 
 Simply put, I like to build things that matter, evangelize the ideas behind them, and inspire the people around me to do their best work to date.
 
 ## Key Achievements
 
-- Invited to present at the prestigious Cisco Live 2017 and Cisco Live 2016 events on advancements in DevOps and Enterprise Class Continuous Delivery.
-- Led Cisco IT's first Software Developer Experience as a Thought Leader, Evangelist, and Solutions Architect.
+- Helped shape the enterprise rollout of AI coding tools (GitHub Copilot, Cursor, Windsurf, Codex, Claude Code) to 30,000+ engineers, and designed CodeTokens, a centralized in-house system for tracking and governing token usage and spend across all five tools.
+- Led Cisco IT's first Software Developer Experience Portal (_Code_) as a Thought Leader, Evangelist, and Solutions Architect. Today it serves _all_ of Cisco's software teams.
 - Innovated development of Cisco's first centrally managed Continuous Delivery Platform.
 - Architected the first customer-facing Enterprise App Store for Cisco's Cius product.
 - Created the first Social Computing Platform for Cisco.
 - Oversaw development of the first Cisco API Management Platform, featuring a customer-facing API Console.
+- Invited to present at the prestigious Cisco Live 2017 and Cisco Live 2016 events on advancements in DevOps and Enterprise Class Continuous Delivery.
 
 ## Experience
 
@@ -30,23 +33,27 @@ Simply put, I like to build things that matter, evangelize the ideas behind them
 
 #### Senior Staff Software Engineer
 
-**Job Title:** Sr. Staff Software Engineer (Enterprise DevOps-as-a-Service)  
-**Dates:** February 2023 - Present  
-**Location:** Austin, Texas Metropolitan Area - Remote
+**Job Title:** Sr. Staff Software Engineer (AI-Native Engineering)  
+**Dates:** August 2025 - Present  
+**Location:** Austin, Texas - Remote
 
-- Lead efforts to standardize an enterprise-scale PPM tool for Operations and Engineering, including conducting a thorough analysis of Aha!, Atlassian Jira Align, and ServiceNow.
-- Drive widespread adoption of Jira Align across multiple teams following a presentation to the COO on key findings.
-- Investigate solutions to modernize the stack, reduce technical debt, and offer a frictionless experience for the 25K+ Cisco employees across Engineering, Customer Support, and Operations, replacing a homegrown tool for defect lifecycle management.
+- Led the design and rollout of the DevTools AI Agent, a supervisor-agent system that routes developer requests to specialized agents for onboarding and operational support across 12+ software delivery tools.
+- Architected and delivered 12+ DevTools MCP (Model Context Protocol) services exposing 100+ tools, giving AI assistants and agents standardized access to the software delivery platform.
+- Partnered on the company-wide rollout of AI coding tools (GitHub Copilot, Cursor, ChatGPT/Codex, Claude Code), and conceived and designed CodeTokens to give leadership per-developer visibility into token and model usage.
+- Led solution architecture to modernize a 30+-year-old defect tracking system (40,000+ users, 1M+ edits/year), driving alignment across multiple business units.
 
-#### Staff Software Engineer
+#### Senior Staff Software Engineer
 
-**Dates:** January 2022 - February 2023  
+**Job Title:** Sr. Staff Software Engineer (Enterprise DevOps-as-a-Service) 
+**Dates:** January 2022 - July 2025
 **Location:** Austin, Texas - Remote
 
 - Spearhead the definition, design, documentation, and delivery of cutting-edge software delivery (Enterprise DevOps) tools and experiences to a team of over 30K software engineers.
 - Shape enterprise-wide decision-making by presenting frequent, impactful strategic and operational updates related to services and service offerings to Senior IT Leadership.
 - Provide insightful thought leadership and technical solutions while evangelizing solutions to Cisco IT customers.
 - Reduced costs by launching the Cisco FCS Software Distribution solution using Dev Hub Download to support shipping FCS binaries as container images instead of paying Cloud Providers to host FCS container images.
+- Led efforts to standardize an enterprise-scale PPM tool for Operations and Engineering, including conducting a thorough analysis of Aha!, Atlassian Jira Align, and ServiceNow.
+
 
 #### Senior DevOps Architect
 
