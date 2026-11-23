@@ -13,8 +13,8 @@ from docx.shared import Inches, Pt, RGBColor
 ROOT = Path(__file__).resolve().parent
 OUT_DIR = ROOT / "output" / "docx"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
-PHOTO_SRC = ROOT / "tmp" / "pdfs" / "resume-photo.jpg"
-PHOTO_CIRCLE = ROOT / "tmp" / "qa-docx" / "resume-photo-circle.png"
+PHOTO_SRC = ROOT / "references" / "resume-photo.jpg"
+PHOTO_CIRCLE = ROOT / "tmp" / "resume-photo-circle.png"  # generated from PHOTO_SRC on each build
 OUTPUT = OUT_DIR / "anand-sharma-resume.docx"
 
 ACCENT = "35B4DE"

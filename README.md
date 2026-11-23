@@ -7,7 +7,7 @@ This repository contains the static resume site published at [resume.indrayam.co
 - `references/resume.md` — factual resume content and source referenced by the HTML page.
 - `index.html` and `style.css` — primary resume page and its styling.
 - `architect.html` — the supporting software-architect page linked from the resume.
-- `build_resume_docx.py` — builds the editable DOCX at `output/docx/anand-sharma-resume.docx`. Its resume text is currently maintained separately in the script; it does not read `references/resume.md`.
+- `build_resume_docx.py` — builds the editable DOCX at `output/docx/anand-sharma-resume.docx`. Its resume text is currently maintained separately in the script; it does not read `references/resume.md`. It reads the header portrait from `references/resume-photo.jpg` and writes the circular crop to `tmp/` on each run. Run it with `uv run --no-project --with python-docx --with pillow python build_resume_docx.py`.
 - `output/pdf/` and `output/docx/` — downloadable resume documents served by the site.
 - `images/` — site and resume images.
 
