@@ -10,11 +10,11 @@
 
 - Treat `references/resume.md` as the factual source for resume content. Do not invent, embellish, or silently alter career facts, dates, titles, metrics, or claims.
 - The HTML in `index.html` identifies `references/resume.md` as its content source. The downloadable DOCX and PDF in `output/` are separate representations; keep them consistent with `references/resume.md` when changing resume content, while respecting their format-specific layout.
-- The published DOCX is edited in place from the Word file and the PDF is exported from it by Microsoft Word; `README.md` describes the scripts. Do not run `build_resume_docx.py` to refresh `output/`: its hard-coded content dates from September 2026 and would overwrite the published DOCX with an older resume. If you run it for another reason, restore `output/docx/` afterwards.
+- The published DOCX is edited in place from the Word file and the PDF is exported from it by Microsoft Word; the scripts are in `tools/docx-update/` and `README.md` describes them. Do not run `build_resume_docx.py` to refresh `output/`: its hard-coded content dates from September 2026 and would overwrite the published DOCX with an older resume. If you run it for another reason, restore `output/docx/` afterwards.
 - Nothing in `output/` is regenerated automatically. Do not claim to have rebuilt an output you did not rebuild and render.
 - Preserve the site's existing visual design, responsive behavior, accessibility, working links, and shared navigation unless the request explicitly calls for a change.
 - Avoid unrelated dependencies, tooling, or redesigns. Do not overwrite original reference documents without an explicit request.
-- Use `tmp/` as scratch space for content generation: renders, intermediate DOCX/PDF builds, diffs. Git and Vercel both ignore it, so never rely on anything there surviving or shipping. Move anything worth keeping, such as an alternate version of a document, into `references/`. The DOCX editing scripts currently live in the ignored `tmp/docx-update/`; do not delete them during cleanup.
+- Use `tmp/` as scratch space for content generation: renders, intermediate DOCX/PDF builds, diffs. Git and Vercel both ignore it, so never rely on anything there surviving or shipping. Move anything worth keeping, such as an alternate version of a document, into `references/`.
 
 ## Verification
 

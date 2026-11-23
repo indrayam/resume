@@ -4,6 +4,7 @@
 /build_resume_docx.py
 /references/
 /tmp/
+/tools/
 # output/ stays: index.html links output/pdf/anand-sharma-resume.pdf
 .env*
 /.claude/
