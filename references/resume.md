@@ -19,7 +19,7 @@ Simply put, I like to build things that matter, evangelize the ideas behind them
 
 ## Key Achievements
 
-- Helped shape the enterprise rollout of AI coding tools (GitHub Copilot, Cursor, Windsurf, Codex, Claude Code) to 30,000+ engineers, and designed CodeTokens, a centralized in-house system for tracking and governing token usage and spend across all five tools.
+- Helped shape the enterprise rollout of AI coding tools (GitHub Copilot, Cursor, Windsurf, Codex, Claude Code) to 30,000+ engineers, and designed _CodeTokens_, a centralized in-house system for tracking and governing token usage and spend across all five tools.
 - Led Cisco IT's first Software Developer Experience Portal (_Code_) as a Thought Leader, Evangelist, and Solutions Architect. Today it serves _all_ of Cisco's software teams.
 - Innovated development of Cisco's first centrally managed Continuous Delivery Platform.
 - Architected the first customer-facing Enterprise App Store for Cisco's Cius product.
@@ -39,7 +39,7 @@ Simply put, I like to build things that matter, evangelize the ideas behind them
 
 - Led the design and rollout of the DevTools AI Agent, a supervisor-agent system that routes developer requests to specialized agents for onboarding and operational support across 12+ software delivery tools.
 - Architected and delivered 12+ DevTools MCP (Model Context Protocol) services exposing 100+ tools, giving AI assistants and agents standardized access to the software delivery platform.
-- Partnered on the company-wide rollout of AI coding tools (GitHub Copilot, Cursor, ChatGPT/Codex, Claude Code), and conceived and designed CodeTokens to give leadership per-developer visibility into token and model usage.
+- Partnered on the company-wide rollout of AI coding tools (GitHub Copilot, Cursor, ChatGPT/Codex, Claude Code), and conceived and designed _CodeTokens_ to give leadership per-developer visibility into token and model usage.
 - Led solution architecture to modernize a 30+-year-old defect tracking system (40,000+ users, 1M+ edits/year), driving alignment across multiple business units.
 
 #### Senior Staff Software Engineer
@@ -61,7 +61,7 @@ Simply put, I like to build things that matter, evangelize the ideas behind them
 **Dates:** February 2019 - January 2022  
 **Location:** Raleigh, North Carolina - On-site
 
-- Introduced first-of-its-kind Code Analytics tool to measure software delivery performance (quality, security, and release metrics) for over approximately 17K unique software, enabling 1K+ engineers to track progress on DevSecOps metrics.
+- Introduced first-of-its-kind _Code Analytics_ tool to measure software delivery performance (quality, security, and release metrics) for over approximately 17K unique software, enabling 1K+ engineers to track progress on DevSecOps metrics.
 - Increased adoption of Cisco IT CI/CD practices for software delivery to 90% across the organization.
 - Boosted the percentage of IT applications deployed into production with unit tests from 7% to 66% and improved unit test coverage for applications by 600%.
 - Led event-driven microservices architecture build using a Java SpringBoot, Kafka, Redis, and Angular UX stack.
@@ -72,7 +72,7 @@ Simply put, I like to build things that matter, evangelize the ideas behind them
 **Dates:** January 2018 - February 2019  
 **Location:** Raleigh, North Carolina - On-site
 
-- Drove delivery of approximately 50K software promotions to higher lifecycle environments by creating Code Release as a single software release orchestrator to deliver software using any deployment tool anywhere.
+- Drove delivery of approximately 50K software promotions to higher lifecycle environments by creating _Code Release_ as a single software release orchestrator to deliver software using any deployment tool anywhere.
 - Grew total raw Production Deployments number by 90% and increased median daily Production Deployments by approximately 300% to approximately 100 per day.
 - Reduced software promotion times to approximately 10 minutes, which improved Deployment Frequency DORA metrics for Cisco IT.
 - Led event-driven microservices architecture build using a Java SpringBoot, Kafka, Redis, Argo Workflow, and React-based UX stack.
@@ -84,7 +84,7 @@ Simply put, I like to build things that matter, evangelize the ideas behind them
 **Location:** Raleigh, North Carolina - On-site
 
 - Led Cisco IT's first-ever Software Developer Experience Portal as a Thought Leader, Evangelist, and Solutions Architect. The Software Developer Experience removes friction and contextual work for the developer, allowing them to continue to focus on building software.
-- Improved the Lead Time for Changes DORA metric by reducing self-service requests to approximately 5 minutes, resulting in the self-service of approximately 22K CRUD requests across 4K+ unique Software Engineers using Code Console in 2018.
+- Improved the Lead Time for Changes DORA metric by reducing self-service requests to approximately 5 minutes, resulting in the self-service of approximately 22K CRUD requests across 4K+ unique Software Engineers using _Code Console_ in 2018.
 - Oversaw event-driven Microservices architecture built using Java SpringBoot, MongoDB, Redis, and React-based UX stack.
 
 #### DevOps Architect
