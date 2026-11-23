@@ -273,10 +273,11 @@ pre {
 	right: 0;
 	display: inline-flex;
 	align-items: center;
-	gap: 0.45em;
+	gap: 0.9em;
 }
 
-.resume-pdf-download {
+/* PDF and DOCX links */
+.resume-download {
 	display: inline-flex;
 	align-items: center;
 	gap: 0.25em;
@@ -285,7 +286,7 @@ pre {
 	text-decoration: none;
 }
 
-.resume-pdf-icon {
+.resume-download-icon {
 	width: 1.35em;
 	height: 1.35em;
 }
