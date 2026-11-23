@@ -12,7 +12,7 @@ This repository contains the static resume site published at [resume.indrayam.co
 - `references/` — not deployed. `resume-original.docx` and `.pdf` are the original Word resume; `headshot-version/` is the current resume with the original studio headshot instead of the website portrait (its README explains how to switch back); `resume-photo.jpg` is the website portrait used in the DOCX header.
 - `build_resume_docx.py` — the older DOCX generator. See below before running it.
 - `tools/docx-update/` — the scripts behind the current DOCX and PDF (not deployed). See below.
-- `images/` — site images: company logos, the share image `og-resume.png`, the 404 illustration, and the architect-elevator image.
+- `images/` — site images: company logos, the dash background tile `blue-dash.gif`, the share image `og-resume.png`, the 404 illustration, and the architect-elevator image.
 - `favicon.ico`, `apple-touch-icon.png` — the icon shared by every indrayam.com site.
 - `robots.txt`, `sitemap.xml` — crawler files for this host.
 - `vercel.json` — the shared security headers, plus `Content-Type: application/pdf` and `Content-Disposition: inline` on the PDF.
