@@ -1,0 +1,9 @@
+# Working files that must not be deployed (Vercel serves every uploaded file).
+/AGENTS.md
+/README.md
+/build_resume_docx.py
+/references/
+/tmp/
+# output/ stays: index.html links output/pdf/anand-sharma-resume.pdf
+.env*
+/.claude/
