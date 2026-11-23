@@ -215,10 +215,10 @@ pre {
 
 .copyright {
 	font-family: var(--font-site-body);
-	font-size: 11px;
+	font-size: 0.6875rem;
 	margin-top: 5px;
 	text-align:center;
-	color: var(--color-faint);
+	color: #767676;
 }
 
 /* Narrower viewports: content nearly full width with 10px insets. */
@@ -323,8 +323,8 @@ pre {
 .error-page .aboutme-image-caption {
 	width: 80%;
 	margin: 4px auto 0;
-	color: var(--color-muted);
-	font-size: 9px;
+	color: #767676;
+	font-size: 0.5625rem;
 	line-height: 1.3;
 	text-align: center;
 }
@@ -506,7 +506,8 @@ pre {
 	margin: 0.55em 0 0.7em;
 }
 
-.resume-page h4 {
+.resume-page h4,
+.resume-page h3.resume-item {
 	font-family: var(--font-ui);
 	font-weight: 900;
 	color: var(--color-content);
@@ -618,7 +619,7 @@ body { background-image: none !important; background-color: #ffffff; }
 .site-nav li { margin: 0; padding: 0; background: none; }
 .site-nav a { display: inline-block; padding: 4px 0; color: #111111; font-family: Fraunces, Georgia, "Times New Roman", serif; font-size: 1.05rem; font-weight: 300; line-height: 1.6; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 3px; text-underline-offset: 7px; transition: text-decoration-color 0.15s ease; }
 .site-nav a:hover, .site-nav a:focus-visible, .site-nav a[aria-current="page"] { text-decoration-color: #e7651a; }
-.site-nav a:focus-visible { outline: none; }
+.site-nav a:focus-visible { outline: 2px solid #e7651a; outline-offset: 4px; }
 .post { border: none !important; margin-top: 0 !important; }
 .page-masthead { text-align: center; padding-bottom: 0.45rem; }
 .page-masthead-name { font-family: "Source Sans Pro", Arial, sans-serif; font-weight: 900; font-size: clamp(2.5rem, 5vw, 3.85rem); letter-spacing: 0; line-height: 1.02; color: #333333; margin: 0; padding: 0; border: 0; }
