@@ -13,6 +13,7 @@
 - Do not assume the PDF or other files in `output/` are regenerated automatically. Inspect the available workflow before changing or claiming to have rebuilt an output.
 - Preserve the site's existing visual design, responsive behavior, accessibility, working links, and shared navigation unless the request explicitly calls for a change.
 - Avoid unrelated dependencies, tooling, or redesigns. Do not overwrite original reference documents without an explicit request.
+- Use `tmp/` as scratch space for content generation: renders, intermediate DOCX/PDF builds, diffs. Git and Vercel both ignore it, so never rely on anything there surviving or shipping. Move anything worth keeping, such as an alternate version of a document, into `references/`.
 
 ## Verification
 

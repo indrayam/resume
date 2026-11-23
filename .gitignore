@@ -1,2 +1,5 @@
 .vercel
 .env*
+
+# Scratch space for content generation (renders, DOCX/PDF builds). Never committed.
+/tmp/
