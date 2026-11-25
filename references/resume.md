@@ -185,7 +185,7 @@ The IS Lab catered to the technology needs of Arizona State instructors and stud
 
 Arizona State University - Tempe, AZ | 1997 - 1998
 
-### Master of Science, Industrial Engineering (minor in Information Systems)
+### Master of Science in Engineering, Industrial Engineering (minor in Information Systems)
 
 Arizona State University - Tempe, AZ | 1995 - 1997
 

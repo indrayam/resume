@@ -121,7 +121,7 @@ JOBS = [
 
 EDUCATION = [
     ("Master of Science, Computer Science", "Arizona State University, Tempe, AZ", "1997 – 1998"),
-    ("Master of Science, Industrial Engineering (minor in Information Systems)", "Arizona State University, Tempe, AZ", "1995 – 1997"),
+    ("Master of Science in Engineering, Industrial Engineering (minor in Information Systems)", "Arizona State University, Tempe, AZ", "1995 – 1997"),
     ("Bachelor of Technology, Mechanical Engineering", "National Institute of Technology (NIT), Kurukshetra, India", "1991 – 1995"),
 ]
 
