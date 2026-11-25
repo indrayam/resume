@@ -20,7 +20,8 @@ from docx.shared import Inches, Pt, RGBColor
 
 # Styled after the main resume DOCX: Montserrat, cyan accent, dark text.
 FONT = "Montserrat"
-BODY = 9
+BODY = 9          # general 2-page version
+FED_BODY = 10     # federal: IRS requires 10 pt or larger
 ACCENT = RGBColor(0x47, 0xB9, 0xDF)
 DARK = RGBColor(0x22, 0x22, 0x22)
 SUBTITLE = "Architect / Senior Staff Engineer"
@@ -29,6 +30,13 @@ CONTACT = ["Austin, TX", "(408) 597-7614", "anand.sharma@gmail.com",
            "linkedin.com/in/indrayam", "U.S. Citizen"]
 
 SUPERVISOR = "Mohan Raghupathy"
+
+# Federal: one sentence, to keep 10 pt text within 2 pages.
+FED_SUMMARY = (
+    "Senior Staff Software Engineer and Solutions Architect with 25+ years at Cisco "
+    "building developer platforms for 30,000+ engineers: CI/CD, release orchestration, "
+    "DevSecOps metrics, and multi-agent AI."
+)
 
 SUMMARY = (
     "Senior Staff Software Engineer and Solutions Architect with 25+ years at Cisco "
@@ -45,7 +53,7 @@ JOBS = [
      "Austin, TX (Remote)", "08/2025", "Present", [
         "Led the design and rollout of the DevTools AI Agent, a supervisor-agent system that routes developer requests to specialized agents for onboarding and operational support across 12+ software delivery tools.",
         "Architected and delivered 12+ DevTools MCP (Model Context Protocol) services exposing 100+ tools, giving AI assistants and agents standardized access to the software delivery platform.",
-        "Partnered on the company-wide rollout of AI coding tools (GitHub Copilot, Cursor, ChatGPT/Codex, Claude Code), and conceived and designed CodeTokens to give leadership per-developer visibility into token and model usage.",
+        "Partnered on the company-wide rollout of AI coding tools (GitHub Copilot, Cursor, ChatGPT/Codex, Claude Code), and conceived and designed CodeTokens for per-developer visibility into token and model usage.",
         "Led solution architecture to modernize a 30+-year-old defect tracking system (40,000+ users, 1M+ edits/year), driving alignment across multiple business units.",
     ]),
     ("Senior Staff Software Engineer (Enterprise DevOps-as-a-Service)", "Cisco Systems",
@@ -56,10 +64,10 @@ JOBS = [
         "Led the effort to standardize an enterprise-scale PPM tool for Operations and Engineering, including an analysis of Aha!, Atlassian Jira Align, and ServiceNow.",
     ]),
     ("Senior Solution Architect, DevOps", "Cisco Systems",
-     "Raleigh, NC / Austin, TX (Remote from 06/2021)", "02/2019", "01/2022", [
-        "Introduced the first-of-its-kind Code Analytics tool to measure software delivery performance (quality, security, and release metrics) for ~17,000 unique software components, enabling 1,000+ engineers to track DevSecOps metrics.",
+     "Austin, TX (Remote)", "02/2019", "01/2022", [
+        "Introduced Code Analytics, a first-of-its-kind tool measuring delivery performance (quality, security, release metrics) for ~17,000 software components, used by 1,000+ engineers to track DevSecOps.",
         "Increased adoption of Cisco IT CI/CD practices for software delivery to 90% across the organization.",
-        "Raised the share of IT applications deployed to production with unit tests from 7% to 66% and improved unit test coverage by 600%.",
+        "Raised IT applications deployed with unit tests from 7% to 66% and improved unit test coverage by 600%.",
         "Led an event-driven microservices build on Java Spring Boot, Kafka, Redis, and Angular.",
     ]),
     ("IT Architect, DevOps", "Cisco Systems",
@@ -76,7 +84,7 @@ JOBS = [
      "Raleigh, NC (On-site)", "02/2014", "03/2016", [
         "Launched Cisco IT's first Continuous Delivery Platform, reaching ~90% adoption of CI/CD tools across ~100 IT services and ~2,000 IT applications.",
         "Built a homegrown continuous delivery solution for Oracle software, raising production deployments with unit tests from under 10% to 60%+; used by 90% of Cisco teams for 100+ deployments a day.",
-        "Delivered core DevOps tools: GitHub SaaS and Enterprise, CloudBees Jenkins, Artifactory, SonarQube, Spinnaker, and CloudBees CDRO.",
+        "Delivered core DevOps tools: GitHub SaaS/Enterprise, Jenkins, Artifactory, SonarQube, Spinnaker, CloudBees CDRO.",
     ]),
     ("Information Technology System Architect", "Cisco Systems",
      "Raleigh, NC (On-site)", "07/2010", "02/2014", []),
@@ -84,21 +92,21 @@ JOBS = [
      "San Jose, CA (On-site)", "09/2005", "07/2010", []),
     ("Information Technology Engineer", "Cisco Systems",
      "San Jose, CA (On-site)", "08/2001", "09/2005", [
-        "Architected and built web applications for the Advanced Services business unit on J2EE with Struts and WebWork.",
+        "Architected and built Advanced Services web applications on J2EE (Struts, WebWork).",
         "System administrator for the Professional Services Automation application; core team member for its US and global launch; provided 24x7 support for all AS-IT applications.",
     ]),
     ("Information Technology Analyst", "Cisco Systems",
      "San Jose, CA", "02/2001", "08/2001", [
-        "Gathered business needs and co-authored business and system requirements documents and QA test plans.",
+        "Gathered business needs; co-authored business and system requirements and QA test plans.",
     ]),
     ("Web Architect", "Avaya", "spun off from Lucent's Octel division", "03/2000", "02/2001", [
-        "Researched WAP enablement of Avaya's e-business applications and new Java/XSLT publishing frameworks.",
+        "Researched WAP enablement of Avaya's e-business apps and Java/XSLT publishing frameworks.",
     ]),
     ("IT Software Engineer", "Lucent Technologies", None, "01/1999", "02/2001", [
-        "Played a lead role designing and developing Lucent's first single sign-on solution for external web applications (Netegrity SiteMinder).",
+        "Took a lead role building Lucent's first single sign-on for external web apps (Netegrity SiteMinder).",
     ]),
     ("Web Technical Leader", "Lucent Technologies", None, "02/1999", "03/2000", [
-        "Led three developers migrating the Customer Self Support site (support.lucent.com) to a Netscape NES/NAS and Oracle stack.",
+        "Led three developers migrating Customer Self Support (support.lucent.com) to Netscape NES/NAS and Oracle.",
     ]),
 ]
 
@@ -120,7 +128,14 @@ AWARDS = [
     "2018 Gold Stevie Award: Enterprise Software Release Digitization, Secure DevOps",
     "Cisco Live 2017 presenter: “Enterprise Class Continuous Delivery”",
     "Cisco Live 2016 panelist: “Addressing the What’s, Why’s and How’s in the New World of DevOps”",
-    "Cloud Identity Summit 2012 presenter: “Who Says Elephant Can’t Dance? Securely Externalizing APIs @ Cisco”",
+    "Cloud Identity Summit 2012: “Who Says Elephant Can’t Dance? Securely Externalizing APIs @ Cisco”",
+]
+
+
+FED_AWARDS = [
+    AWARDS[0],
+    "Cisco Live presenter, 2017 (“Enterprise Class Continuous Delivery”) and panelist, 2016 (“Addressing the What’s, Why’s and How’s in the New World of DevOps”)",
+    AWARDS[3],
 ]
 
 
@@ -129,7 +144,8 @@ def fmt(p, before=0, after=0, line=1.0):
     pf.space_before, pf.space_after, pf.line_spacing = Pt(before), Pt(after), line
 
 
-def run(p, text, bold=False, italic=False, size=BODY, color=DARK):
+def run(p, text, bold=False, italic=False, size=None, color=DARK):
+    size = size or BODY
     r = p.add_run(text)
     r.bold, r.italic = bold, italic
     r.font.size, r.font.name = Pt(size), FONT
@@ -156,9 +172,11 @@ def heading(doc, text):
     p.paragraph_format.keep_with_next = True
 
 
-def bullet(doc, text):
+def bullet(doc, text, keep=False):
     p = doc.add_paragraph(style="List Bullet")
     fmt(p, after=1)
+    p.paragraph_format.keep_together = True
+    p.paragraph_format.keep_with_next = keep
     p.paragraph_format.left_indent = Inches(0.2)
     p.paragraph_format.first_line_indent = Inches(-0.14)
     run(p, text)
@@ -169,12 +187,14 @@ def right_tab(p, width):
 
 
 def build(out, federal=True):
+    global BODY
+    BODY = FED_BODY if federal else BODY
     doc = Document()
     sec = doc.sections[0]
     sec.page_width, sec.page_height = Inches(8.5), Inches(11)
     for side in ("left_margin", "right_margin"):
-        setattr(sec, side, Inches(0.6))
-    sec.top_margin = sec.bottom_margin = Inches(0.5)
+        setattr(sec, side, Inches(0.5 if federal else 0.6))
+    sec.top_margin = sec.bottom_margin = Inches(0.45 if federal else 0.5)
     width = sec.page_width - sec.left_margin - sec.right_margin
 
     normal = doc.styles["Normal"]
@@ -195,7 +215,7 @@ def build(out, federal=True):
     heading(doc, "Summary")
     p = doc.add_paragraph()
     fmt(p)
-    run(p, SUMMARY)
+    run(p, FED_SUMMARY if federal else SUMMARY)
 
     heading(doc, "Professional Experience")
     for i, (title, employer, loc, start, end, bullets) in enumerate(JOBS):
@@ -219,8 +239,9 @@ def build(out, federal=True):
             fmt(p, after=1)
             p.paragraph_format.keep_with_next = True
             run(p, f"Supervisor: {SUPERVISOR}", italic=True)
-        for b in bullets:
-            bullet(doc, b)
+        for j, b in enumerate(bullets):
+            # Keep a job's bullets on one page so none is stranded on the next.
+            bullet(doc, b, keep=j < len(bullets) - 1)
 
     heading(doc, "Education")
     for degree, school, years in EDUCATION:
@@ -242,7 +263,7 @@ def build(out, federal=True):
         run(p, items)
 
     heading(doc, "Awards and Presentations")
-    for a in AWARDS:
+    for a in (FED_AWARDS if federal else AWARDS):
         bullet(doc, a)
 
     doc.core_properties.title = "Anand Sharma – " + ("Federal Resume" if federal else "Resume")

@@ -268,25 +268,34 @@ pre {
 }
 
 .resume-actions {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: inline-flex;
 	align-items: center;
-	row-gap: 0.3em;
-	margin-bottom: 0.4em;
+	gap: 0.9em;
 }
 
-/* PDF and DOCX links, separated by thin grey rules */
+/* PDF and DOCX links */
 .resume-download {
-	padding: 0 0.75em;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25em;
 	color: var(--color-accent);
-	font-size: 0.6em;
-	line-height: 1.2;
+	font-size: 0.72em;
 	text-decoration: none;
 }
 
-.resume-download + .resume-download {
-	border-left: 1px solid #c8c8c8;
+.resume-download-icon {
+	width: 1.35em;
+	height: 1.35em;
+}
+
+/* The labels are capitals with no descenders, so centering the line box
+   leaves them about 2px above the icon's middle; nudge them down. */
+.resume-download span {
+	position: relative;
+	top: 0.14em;
 }
 
 .article-page {
@@ -581,6 +590,12 @@ pre {
 
 	.resume-page {
 		padding: 15px 10px;
+	}
+
+	.resume-actions {
+		position: static;
+		justify-content: flex-end;
+		margin-bottom: 0.5em;
 	}
 
 	.resume-contact {
