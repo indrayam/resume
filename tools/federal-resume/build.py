@@ -48,65 +48,74 @@ SUMMARY = (
 )
 
 # (title, employer, location, start, end, [bullets])
+# Dates are MM/DD/YYYY, as the IRS asks. Months follow resume.md and LinkedIn;
+# the days are best estimates chosen on 2026-11-25 (no records survive), set so
+# each role ends the day before the next begins. Avaya's start is its 10/01/2000
+# spin-off from Lucent. The 02/2014-03/2016 role is "IT Architect, DevOps": Anand
+# confirmed the old "API Management" title (still on LinkedIn) was a typo; the focus had
+# moved to DevOps by 2014. API work belongs to 2010-2014. The Lucent IT Software Engineer
+# role is folded into Web Technical Leader, which covers all of Lucent. Use these same dates on every federal application.
 JOBS = [
     ("Senior Staff Software Engineer (AI-Native Engineering)", "Cisco Systems",
-     "Austin, TX (Remote)", "08/2025", "Present", [
+     "Austin, TX (Remote)", "08/01/2025", "Present", [
         "Led the design and rollout of the DevTools AI Agent, a supervisor-agent system that routes developer requests to specialized agents for onboarding and operational support across 12+ software delivery tools.",
         "Architected and delivered 12+ DevTools MCP (Model Context Protocol) services exposing 100+ tools, giving AI assistants and agents standardized access to the software delivery platform.",
         "Partnered on the company-wide rollout of AI coding tools (GitHub Copilot, Cursor, ChatGPT/Codex, Claude Code), and conceived and designed CodeTokens for per-developer visibility into token and model usage.",
         "Led solution architecture to modernize a 30+-year-old defect tracking system (40,000+ users, 1M+ edits/year), driving alignment across multiple business units.",
     ]),
     ("Senior Staff Software Engineer (Enterprise DevOps-as-a-Service)", "Cisco Systems",
-     "Austin, TX (Remote)", "01/2022", "07/2025", [
+     "Austin, TX (Remote)", "01/10/2022", "07/31/2025", [
         "Defined, designed, documented, and delivered enterprise software delivery (DevOps) tools and experiences for 30,000+ software engineers.",
         "Shaped enterprise-wide decisions through frequent strategic and operational briefings on services and service offerings to senior IT leadership.",
         "Reduced costs by launching the Cisco FCS Software Distribution solution, using Dev Hub Download to ship FCS binaries as container images instead of paying cloud providers to host them.",
         "Led the effort to standardize an enterprise-scale PPM tool for Operations and Engineering, including an analysis of Aha!, Atlassian Jira Align, and ServiceNow.",
     ]),
     ("Senior Solution Architect, DevOps", "Cisco Systems",
-     "Austin, TX (Remote)", "02/2019", "01/2022", [
+     "Austin, TX (Remote)", "02/11/2019", "01/09/2022", [
         "Introduced Code Analytics, a first-of-its-kind tool measuring delivery performance (quality, security, release metrics) for ~17,000 software components, used by 1,000+ engineers to track DevSecOps.",
         "Increased adoption of Cisco IT CI/CD practices for software delivery to 90% across the organization.",
         "Raised IT applications deployed with unit tests from 7% to 66% and improved unit test coverage by 600%.",
         "Led an event-driven microservices build on Java Spring Boot, Kafka, Redis, and Angular.",
     ]),
     ("IT Architect, DevOps", "Cisco Systems",
-     "Raleigh, NC (On-site)", "01/2018", "02/2019", [
+     "Raleigh, NC (On-site)", "01/08/2018", "02/10/2019", [
         "Created Code Release, a single release orchestrator that delivers software with any deployment tool anywhere, driving ~50,000 software promotions to higher lifecycle environments.",
         "Grew total production deployments by 90% and median daily production deployments by ~300% to ~100 per day; cut promotion times to ~10 minutes, improving DORA Deployment Frequency.",
     ]),
     ("IT Architect, DevOps", "Cisco Systems",
-     "Raleigh, NC (On-site)", "03/2016", "01/2018", [
+     "Raleigh, NC (On-site)", "03/14/2016", "01/07/2018", [
         "Led Cisco IT's first Software Developer Experience Portal as thought leader, evangelist, and solutions architect, removing friction so developers can focus on building software.",
         "Improved DORA Lead Time for Changes by cutting self-service requests to ~5 minutes; ~22,000 CRUD requests self-served by 4,000+ engineers through Code Console in 2018.",
     ]),
-    ("IT Architect, API Management", "Cisco Systems",
-     "Raleigh, NC (On-site)", "02/2014", "03/2016", [
+    ("IT Architect, DevOps", "Cisco Systems",
+     "Raleigh, NC (On-site)", "02/10/2014", "03/13/2016", [
         "Launched Cisco IT's first Continuous Delivery Platform, reaching ~90% adoption of CI/CD tools across ~100 IT services and ~2,000 IT applications.",
         "Built a homegrown continuous delivery solution for Oracle software, raising production deployments with unit tests from under 10% to 60%+; used by 90% of Cisco teams for 100+ deployments a day.",
         "Delivered core DevOps tools: GitHub SaaS/Enterprise, Jenkins, Artifactory, SonarQube, Spinnaker, CloudBees CDRO.",
     ]),
     ("Information Technology System Architect", "Cisco Systems",
-     "Raleigh, NC (On-site)", "07/2010", "02/2014", []),
+     "Raleigh, NC (On-site)", "07/12/2010", "02/09/2014", [
+        "Helped launch Cisco's first API management platform, secured with OAuth 2 on Mashery and PingFederate, so Cisco Services could monetize Partner Support Services (PSS) APIs.",
+    ]),
     ("Information Technology Technical Lead", "Cisco Systems",
-     "San Jose, CA (On-site)", "09/2005", "07/2010", []),
+     "San Jose, CA (On-site)", "09/12/2005", "07/11/2010", [
+        "Helped build the first version of the Cisco Developer Network (CDN), Cisco's first developer platform, modeled on Microsoft's MSDN; it has since grown into Cisco DevNet.",
+    ]),
     ("Information Technology Engineer", "Cisco Systems",
-     "San Jose, CA (On-site)", "08/2001", "09/2005", [
+     "San Jose, CA (On-site)", "08/13/2001", "09/11/2005", [
         "Architected and built Advanced Services web applications on J2EE (Struts, WebWork).",
         "System administrator for the Professional Services Automation application; core team member for its US and global launch; provided 24x7 support for all AS-IT applications.",
     ]),
     ("Information Technology Analyst", "Cisco Systems",
-     "San Jose, CA", "02/2001", "08/2001", [
+     "San Jose, CA", "02/12/2001", "08/12/2001", [
         "Gathered business needs; co-authored business and system requirements and QA test plans.",
     ]),
-    ("Web Architect", "Avaya", "spun off from Lucent's Octel division", "03/2000", "02/2001", [
+    ("Web Architect", "Avaya", "spun off from Lucent's Octel division", "10/01/2000", "02/09/2001", [
         "Researched WAP enablement of Avaya's e-business apps and Java/XSLT publishing frameworks.",
     ]),
-    ("IT Software Engineer", "Lucent Technologies", None, "01/1999", "02/2001", [
-        "Took a lead role building Lucent's first single sign-on for external web apps (Netegrity SiteMinder).",
-    ]),
-    ("Web Technical Leader", "Lucent Technologies", None, "02/1999", "03/2000", [
+    ("Web Technical Leader", "Lucent Technologies", None, "01/11/1999", "09/30/2000", [
         "Led three developers migrating Customer Self Support (support.lucent.com) to Netscape NES/NAS and Oracle.",
+        "Took a lead role building Lucent's first single sign-on for external web apps (Netegrity SiteMinder).",
     ]),
 ]
 

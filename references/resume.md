@@ -101,7 +101,7 @@ Simply put, I like to build things that matter, evangelize the ideas behind them
 
 #### DevOps Architect
 
-**Job Title:** IT Architect, API Management  
+**Job Title:** IT Architect, DevOps  
 **Dates:** February 2014 - March 2016  
 **Location:** Raleigh, North Carolina - On-site
 
