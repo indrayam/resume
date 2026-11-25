@@ -35,7 +35,7 @@ Simply put, I like to build things that matter, evangelize the ideas behind them
 - **Data/Event Store:** MongoDB, Postgres, Oracle, Kafka
 - **Compute:** Containers, Kubernetes, OpenStack
 - **Dev Tools:** GitHub, GitHub Actions, Artifactory, SAST/DAST
-- **Integration Platforms:** Mashery, Layers7, Boomi
+- **Integration Platforms:** Mashery, Layer7, Boomi
 - **SaaS:** Salesforce Sales Cloud, Workday
 - **Languages of Interest:** Rust, Go
 
@@ -69,9 +69,9 @@ Simply put, I like to build things that matter, evangelize the ideas behind them
 
 #### Senior DevOps Architect
 
-**Job Title:** Sr. Solutions Architect, DevOps  
+**Job Title:** Senior Solution Architect, DevOps  
 **Dates:** February 2019 - January 2022  
-**Location:** Raleigh, North Carolina - On-site
+**Location:** Austin, Texas - Remote
 
 - Introduced first-of-its-kind _Code Analytics_ tool to measure software delivery performance (quality, security, and release metrics) for over approximately 17K unique software, enabling 1K+ engineers to track progress on DevSecOps metrics.
 - Increased adoption of Cisco IT CI/CD practices for software delivery to 90% across the organization.
@@ -115,19 +115,19 @@ Simply put, I like to build things that matter, evangelize the ideas behind them
 **Dates:** July 2010 - February 2014  
 **Location:** Raleigh, North Carolina - On-site
 
-No detailed description was surfaced in the current LinkedIn profile.
+- Helped launch Cisco's first API management platform, secured with OAuth 2 on Mashery and PingFederate, so Cisco Services could monetize Partner Support Services (PSS) APIs.
 
-#### Information Technology Technical Lead
+#### IT Technical Leader, Web 2.0 (Customer Advocacy IT Team)
 
-**Job Title:** IT Technical Leader, Web 2.0 (Customer Advocacy IT Team)  
+**Job Title:** Information Technology Technical Lead  
 **Dates:** September 2005 - July 2010  
 **Location:** San Jose, California - On-site
 
-No detailed description was surfaced in the current LinkedIn profile.
+- Helped build the first version of the Cisco Developer Network (CDN), Cisco's first developer platform, modeled on Microsoft's MSDN; it has since grown into Cisco DevNet.
 
-#### Information Technology Engineer
+#### IT Software Engineer (Cisco Advanced Services IT Team)
 
-**Job Title:** IT Software Engineer (Cisco Advanced Services IT Team)  
+**Job Title:** Information Technology Engineer  
 **Dates:** August 2001 - September 2005  
 **Location:** San Jose, California - On-site
 
@@ -138,7 +138,8 @@ No detailed description was surfaced in the current LinkedIn profile.
 
 #### Information Technology Analyst
 
-**Dates:** February 2001 - August 2001
+**Dates:** February 2001 - August 2001  
+**Location:** San Jose, California - On-site
 
 - Responsible for understanding business needs and assisted in authoring business requirements documents (BRDs).
 - Worked with the Technical Lead in authoring Systems Requirement Documents (SRDs).
@@ -148,7 +149,9 @@ No detailed description was surfaced in the current LinkedIn profile.
 
 #### Web Architect
 
-**Dates:** March 2000 - February 2001
+**Dates:** October 2000 - February 2001
+
+Avaya was spun off from Lucent's Octel division on October 1, 2000.
 
 The New Technology/Architecture group architected the various components of the e-business infrastructure. It was also responsible for researching new technologies with the aim of building world-class e-business services for customers.
 
@@ -156,18 +159,13 @@ The New Technology/Architecture group architected the various components of the 
 
 ### Lucent Technologies
 
-#### IT Software Engineer
-
-**Dates:** January 1999 - February 2001
-
-- Played a lead role in designing and developing Lucent's first Single Sign-on solution for external web applications, leveraging the Netegrity SiteMinder solution.
-
 #### Web Technical Leader
 
-**Dates:** February 1999 - March 2000
+**Dates:** January 1999 - September 2000
 
 Customer Self Support (support.lucent.com) was an extremely busy site. As the lead developer of the first SSO pilot, took on the added responsibility of leading the effort to migrate the entire application into an NES presentation layer, NAS (Netscape Application Server) business-logic layer, and Oracle 7.3.x data layer framework.
 
+- Played a lead role in designing and developing Lucent's first Single Sign-on solution for external web applications, leveraging the Netegrity SiteMinder solution.
 - Led a team of three developers and rewrote all server-side programs into Java applogics.
 - Administered the development NES/NAS/Oracle environment for the CSS project.
 
@@ -183,13 +181,17 @@ The IS Lab catered to the technology needs of Arizona State instructors and stud
 
 ## Education
 
-### Master of Computer Science, Software Engineering
+### Master of Science, Computer Science
 
-Arizona State University - Tempe, AZ
+Arizona State University - Tempe, AZ | 1997 - 1998
 
-### Master of Science, Industrial Engineering
+### Master of Science in Engineering, Information Systems
 
-Arizona State University - Tempe, AZ
+Arizona State University - Tempe, AZ | 1995 - 1997
+
+### Bachelor of Technology, Mechanical Engineering
+
+National Institute of Technology (NIT) - Kurukshetra, India | 1991 - 1995
 
 ## Awards and Presentations
 

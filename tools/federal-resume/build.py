@@ -107,7 +107,7 @@ JOBS = [
         "System administrator for the Professional Services Automation application; core team member for its US and global launch; provided 24x7 support for all AS-IT applications.",
     ]),
     ("Information Technology Analyst", "Cisco Systems",
-     "San Jose, CA", "02/12/2001", "08/12/2001", [
+     "San Jose, CA (On-site)", "02/12/2001", "08/12/2001", [
         "Gathered business needs; co-authored business and system requirements and QA test plans.",
     ]),
     ("Web Architect", "Avaya", "spun off from Lucent's Octel division", "10/01/2000", "02/09/2001", [
@@ -233,6 +233,8 @@ def build(out, federal=True):
         right_tab(p, width)
         p.paragraph_format.keep_with_next = True
         run(p, title, bold=True)
+        if not federal:  # the general version shows MM/YYYY
+            start, end = (d[:3] + d[6:] if d.count("/") == 2 else d for d in (start, end))
         run(p, f"\t{start} – {end}", bold=True)
         p = doc.add_paragraph()
         fmt(p, after=1)
