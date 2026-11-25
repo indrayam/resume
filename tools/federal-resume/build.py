@@ -1,9 +1,12 @@
-"""Build the 2-page federal resume (VA / IRS applications) as a new DOCX.
+"""Build the 2-page resumes as new DOCX files.
 
-Usage:  uv run --no-project --with python-docx python tools/federal-resume/build.py OUT.docx
+Federal (VA / IRS applications), with hours, supervisor, and citizenship:
+    uv run --no-project --with python-docx python tools/federal-resume/build.py OUT.docx
+General 2-page version linked from the site (same content without those):
+    uv run --no-project --with python-docx python tools/federal-resume/build.py --short OUT.docx
 Then:   tools/docx-update/export.sh OUT.docx OUT.pdf
 
-This does not touch the published resume in output/. Titles, locations, and education follow LinkedIn (read 2026-11-24); Cisco
+This does not touch the main resume in output/. Titles, locations, and education follow LinkedIn (read 2026-11-24); Cisco
 dates for 2018 onward follow references/resume.md, as Anand confirmed; bullet
 text follows references/resume.md.
 """
@@ -15,9 +18,12 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
-FONT = "Calibri"
-BODY = 10
-ACCENT = RGBColor(0x1F, 0x3A, 0x5F)
+# Styled after the main resume DOCX: Montserrat, cyan accent, dark text.
+FONT = "Montserrat"
+BODY = 9
+ACCENT = RGBColor(0x47, 0xB9, 0xDF)
+DARK = RGBColor(0x22, 0x22, 0x22)
+SUBTITLE = "Architect / Senior Staff Engineer"
 
 CONTACT = ["Austin, TX", "(408) 597-7614", "anand.sharma@gmail.com",
            "linkedin.com/in/indrayam", "U.S. Citizen"]
@@ -85,7 +91,7 @@ JOBS = [
      "San Jose, CA", "02/2001", "08/2001", [
         "Gathered business needs and co-authored business and system requirements documents and QA test plans.",
     ]),
-    ("Web Architect", "Avaya (Lucent Octel division, spun off as Avaya)", None, "03/2000", "02/2001", [
+    ("Web Architect", "Avaya", "spun off from Lucent's Octel division", "03/2000", "02/2001", [
         "Researched WAP enablement of Avaya's e-business applications and new Java/XSLT publishing frameworks.",
     ]),
     ("IT Software Engineer", "Lucent Technologies", None, "01/1999", "02/2001", [
@@ -123,7 +129,7 @@ def fmt(p, before=0, after=0, line=1.0):
     pf.space_before, pf.space_after, pf.line_spacing = Pt(before), Pt(after), line
 
 
-def run(p, text, bold=False, italic=False, size=BODY, color=None):
+def run(p, text, bold=False, italic=False, size=BODY, color=DARK):
     r = p.add_run(text)
     r.bold, r.italic = bold, italic
     r.font.size, r.font.name = Pt(size), FONT
@@ -136,7 +142,7 @@ def bottom_border(p):
     pPr = p._p.get_or_add_pPr()
     bdr = OxmlElement("w:pBdr")
     b = OxmlElement("w:bottom")
-    for k, v in (("val", "single"), ("sz", "6"), ("space", "1"), ("color", "1F3A5F")):
+    for k, v in (("val", "single"), ("sz", "6"), ("space", "1"), ("color", "222222")):
         b.set(qn(f"w:{k}"), v)
     bdr.append(b)
     pPr.append(bdr)
@@ -162,7 +168,7 @@ def right_tab(p, width):
     p.paragraph_format.tab_stops.add_tab_stop(width, WD_TAB_ALIGNMENT.RIGHT)
 
 
-def build(out):
+def build(out, federal=True):
     doc = Document()
     sec = doc.sections[0]
     sec.page_width, sec.page_height = Inches(8.5), Inches(11)
@@ -177,12 +183,14 @@ def build(out):
 
     p = doc.add_paragraph()
     fmt(p)
-    p.alignment = 1
-    run(p, "ANAND SHARMA", bold=True, size=18, color=ACCENT)
+    run(p, "ANAND SHARMA", size=22)
     p = doc.add_paragraph()
     fmt(p, after=2)
-    p.alignment = 1
-    run(p, "  |  ".join(CONTACT), size=BODY)
+    run(p, SUBTITLE, size=11, color=ACCENT)
+    p = doc.add_paragraph()
+    fmt(p, after=2)
+    contact = CONTACT if federal else [c for c in CONTACT if c != "U.S. Citizen"]
+    run(p, "  |  ".join(contact), size=BODY)
 
     heading(doc, "Summary")
     p = doc.add_paragraph()
@@ -201,9 +209,12 @@ def build(out):
         fmt(p, after=1)
         p.paragraph_format.keep_with_next = bool(bullets)
         right_tab(p, width)
-        run(p, employer + (f", {loc}" if loc else ""), italic=True)
-        run(p, "\tFull-time, 40 hours per week", italic=True)
-        if i == 0:
+        run(p, employer, bold=True)
+        if loc:
+            run(p, f", {loc}")
+        if federal:
+            run(p, "\tFull-time, 40 hours per week", italic=True)
+        if federal and i == 0:
             p = doc.add_paragraph()
             fmt(p, after=1)
             p.paragraph_format.keep_with_next = True
@@ -216,26 +227,30 @@ def build(out):
         p = doc.add_paragraph()
         fmt(p, after=1)
         right_tab(p, width)
+        p.paragraph_format.keep_with_next = True
         run(p, degree, bold=True)
-        if school:
-            run(p, f", {school}")
         run(p, f"\t{years}")
+        p = doc.add_paragraph()
+        fmt(p, after=3)
+        run(p, school)
 
     heading(doc, "Technical Skills")
     for label, items in SKILLS:
         p = doc.add_paragraph()
         fmt(p, after=1)
-        run(p, f"{label}: ", bold=True)
+        run(p, f"{label}: ", italic=True, color=ACCENT)
         run(p, items)
 
     heading(doc, "Awards and Presentations")
     for a in AWARDS:
         bullet(doc, a)
 
-    doc.core_properties.title = "Anand Sharma – Federal Resume"
+    doc.core_properties.title = "Anand Sharma – " + ("Federal Resume" if federal else "Resume")
     doc.core_properties.author = "Anand Sharma"
     doc.save(out)
 
 
 if __name__ == "__main__":
-    build(sys.argv[1])
+    args = sys.argv[1:]
+    short = "--short" in args
+    build([a for a in args if a != "--short"][0], federal=not short)

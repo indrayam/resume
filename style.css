@@ -268,27 +268,25 @@ pre {
 }
 
 .resume-actions {
-	position: absolute;
-	top: 0;
-	right: 0;
-	display: inline-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	align-items: center;
-	gap: 0.9em;
+	row-gap: 0.3em;
+	margin-bottom: 0.4em;
 }
 
-/* PDF and DOCX links */
+/* PDF and DOCX links, separated by thin grey rules */
 .resume-download {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.25em;
+	padding: 0 0.75em;
 	color: var(--color-accent);
-	font-size: 0.72em;
+	font-size: 0.6em;
+	line-height: 1.2;
 	text-decoration: none;
 }
 
-.resume-download-icon {
-	width: 1.35em;
-	height: 1.35em;
+.resume-download + .resume-download {
+	border-left: 1px solid #c8c8c8;
 }
 
 .article-page {
@@ -583,12 +581,6 @@ pre {
 
 	.resume-page {
 		padding: 15px 10px;
-	}
-
-	.resume-actions {
-		position: static;
-		justify-content: flex-end;
-		margin-bottom: 0.5em;
 	}
 
 	.resume-contact {
