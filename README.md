@@ -9,6 +9,7 @@ This repository contains the static resume site published at [resume.indrayam.co
 - `architect.html` — the supporting software-architect page linked from the resume.
 - `404.html` — custom not-found page with the shared nav and footer.
 - `output/docx/anand-sharma-resume.docx` and `output/pdf/anand-sharma-resume.pdf` — the downloadable resume documents served by the site. See "DOCX and PDF" below.
+- `output/docx/anand-sharma-resume-fed.docx` and `output/pdf/anand-sharma-resume-fed.pdf` — a separate 2-page federal resume (VA and IRS applications) with month/year dates and hours per week for every role. Not linked from the site. `tools/federal-resume/build.py` generates the DOCX (`uv run --no-project --with python-docx python tools/federal-resume/build.py OUT.docx`), and `tools/docx-update/export.sh` exports the PDF. Its content lives in the script, not in `references/resume.md`.
 - `references/` — not deployed. `resume-original.docx` and `.pdf` are the original Word resume; `headshot-version/` is the current resume with the original studio headshot instead of the website portrait (its README explains how to switch back); `resume-photo.jpg` is the website portrait used in the DOCX header.
 - `build_resume_docx.py` — the older DOCX generator. See below before running it.
 - `tools/docx-update/` — the scripts behind the current DOCX and PDF (not deployed). See below.
